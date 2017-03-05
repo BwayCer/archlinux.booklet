@@ -15,6 +15,10 @@ Summary
 * [命令與操作](content/command_and_operation/README.md)
   * [節點安裝](content/command_and_operation/nodejs_install.md)
 
+* [樹莓派見習生](content/raspberry_pi_novice/README.md)
+  * [選購](content/raspberry_pi_novice/pick.md)
+
+
 ---
 
 
