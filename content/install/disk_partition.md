@@ -57,12 +57,16 @@ $ parted /dev/sda
 ## 命令
 
 
- 命令形式       | 主開機紀錄     | 全局唯一識別碼分區表
+各類相關命令與其操作形式一覽：
+
+ 操作形式       | 主開機紀錄     | 全局唯一識別碼分區表
 :--------       |:----------     |:--------------------
  命令           | sfdisk、parted | sfdisk、sgdisk、parted
  對話           | fdisk、parted  | fdisk、gdisk、parted
  文字類圖形介面 | cfdisk         | cfdisk、cgdisk
 
+
+筆者最後選用 `fdisk` 命令， 以下為使用參考：
 
 ```
 $ fdisk /dev/sda
@@ -81,7 +85,7 @@ Command (m for help) m
 Help:
 
   DOS (MBR)
-   a   toggle a bootable flag
+   a   toggle a bootable flag              # 開關可啟動識別標誌
    b   edit nested BSD disklabel
    c   toggle the dos compatibility flag
 
@@ -209,6 +213,8 @@ Swap:       2096124           0     2096124
   [第十六章、程序管理與 SELinux 初探 # free](http://linux.vbird.org/linux_basic/0440processcontrol.php#free)
   。
 
+
+查看磁碟資訊：
 
 ```
 $ lsblk
