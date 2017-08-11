@@ -25,6 +25,7 @@
 
 
 * [Arch Linux 標誌](#arch-linux-標誌)
+* [Arch Linux 安裝導引程式](#arch-linux-安裝導引程式)
 
 
 
@@ -44,6 +45,34 @@
         </li>
         <li>使用頁面：
             <a href="/content/archlinux.md">Arch Linux</a>
+        </li>
+    </ul>
+</div>
+
+
+
+## Arch Linux 安裝導引程式
+
+
+<div class="imgInfo">
+    <a>
+        <img src="/mmrepo/any_file_icon.jpg" />
+    </a>
+    <ul>
+        <li>連結：
+            /mmrepo/installGuide/
+            <br>
+            <a href="/mmrepo/installGuide/sshLogin.sh" target="_blank">
+                sshLogin.sh（啟用 SSH 登入）
+            </a>
+            <br>
+            <a href="/mmrepo/installGuide/isoSmall.sh" target="_blank">
+                isoSmall.sh（Arch Linux 最小化安裝）
+            </a>
+        </li>
+        <li>來源： 無</li>
+        <li>使用頁面：
+            <a href="/content/install/installation_guide.md">安裝指南</a>
         </li>
     </ul>
 </div>

@@ -12,6 +12,8 @@
 * [磁碟分區](#磁碟分區)
 * [主開機紀錄](#主開機紀錄)
 * [全局唯一識別碼分區表](#全局唯一識別碼分區表)
+* [安全殼](#安全殼)
+* [偉大的開機加載程式](#偉大的開機加載程式)
 
 
 
@@ -116,5 +118,36 @@
   [國教院學術詞彙辭書](http://terms.naer.edu.tw/detail/2373746/)
   、
   [維基百科](http://zh.wikipedia.org/wiki/GUID磁碟分割表)
+  。
+
+
+
+## 安全殼
+
+
+可與遠端主機建立安全的連線。
+
+_這用詞與實際功用落差甚大，筆者無法參透。_
+
+
+* 原文： 「Secure Shell」（安全殼），簡稱「SSH」。
+* 參考：
+  [國教院學術詞彙辭書](http://terms.naer.edu.tw/detail/1286026/?index=1)
+  、
+  [維基百科](http://zh.wikipedia.org/wiki/Secure_Shell)
+  。
+
+
+
+## 偉大的開機加載程式
+
+
+電腦開機時運行的程式， 更專業資訊見
+[GRUB - ArchWiki](https://wiki.archlinux.org/index.php/GRUB) 。
+
+
+* 原文： 「GRand Unified Bootloader」（偉大的開機加載程式），簡稱「GRUB」。
+* 參考：
+  無
   。
 
