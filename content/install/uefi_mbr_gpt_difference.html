@@ -1,0 +1,426 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>UEFI、MBR、GPT 區別 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.1">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="disk_partition.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../archlinux.html">
+            
+                <a href="../archlinux.html">
+            
+                    
+                    Arch Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    安裝
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="uefi_mbr_gpt_difference.html">
+            
+                <a href="uefi_mbr_gpt_difference.html">
+            
+                    
+                    UEFI、MBR、GPT 區別
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="disk_partition.html">
+            
+                <a href="disk_partition.html">
+            
+                    
+                    磁碟分區
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="installation_guide.html">
+            
+                <a href="installation_guide.html">
+            
+                    
+                    安裝指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../appendix/">
+            
+                <a href="../../appendix/">
+            
+                    
+                    附錄
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../appendix/bilingual.html">
+            
+                <a href="../../appendix/bilingual.html">
+            
+                    
+                    中譯詞彙對照
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../appendix/used_reference.html">
+            
+                <a href="../../appendix/used_reference.html">
+            
+                    
+                    多媒體資源參考
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >UEFI、MBR、GPT 區別</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="uefi&#x3001;mbr&#x3001;gpt-&#x5340;&#x5225;">UEFI&#x3001;MBR&#x3001;GPT &#x5340;&#x5225;</h1><blockquote><p>2017.08.07</p></blockquote><h2 id="&#x9801;&#x7C64;">&#x9801;&#x7C64;</h2><ul><li><p><a href="#&#x57FA;&#x672C;&#x8F38;&#x5165;&#x8F38;&#x51FA;&#x7CFB;&#x7D71;">&#x57FA;&#x672C;&#x8F38;&#x5165;&#x8F38;&#x51FA;&#x7CFB;&#x7D71;</a></p><ul><li><a href="#UEFI&#x7684;&#x597D;&#x8655;">UEFI &#x7684;&#x597D;&#x8655;</a>
+</li></ul>
+</li>
+<li><p><a href="#&#x78C1;&#x789F;&#x5206;&#x5340;&#x8868;">&#x78C1;&#x789F;&#x5206;&#x5340;&#x8868;</a></p></li>
+<li><a href="#&#x53C3;&#x8003;">&#x53C3;&#x8003;</a>
+</li></ul>
+<h2 id="&#x57FA;&#x672C;&#x8F38;&#x5165;&#x8F38;&#x51FA;&#x7CFB;&#x7D71;">&#x57FA;&#x672C;&#x8F38;&#x5165;&#x8F38;&#x51FA;&#x7CFB;&#x7D71;</h2><p>&#x57FA;&#x672C;&#x8F38;&#x5165;&#x8F38;&#x51FA;&#x7CFB;&#x7D71; <a href="../../appendix/bilingual.html#&#x57FA;&#x672C;&#x8F38;&#x5165;&#x8F38;&#x51FA;&#x7CFB;&#x7D71;">BIOS</a>
+&#x662F;&#x9023;&#x63A5;&#x786C;&#x9AD4;&#x8207;&#x8EDF;&#x9AD4;&#x9593;&#x7684;&#x97CC;&#x9AD4;&#xFF0C;
+&#x4E5F;&#x662F;&#x958B;&#x6A5F;&#x6642;&#x7B2C;&#x4E00;&#x500B;&#x555F;&#x52D5;&#x7684;&#x8EDF;&#x9AD4;&#x3002;</p><p>&#x5728;&#x82F1;&#x7279;&#x723E; <a href="../../appendix/bilingual.html#&#x82F1;&#x7279;&#x723E;">Intel</a> &#x8655;&#x7406;&#x5668;&#x9032;&#x5165; 32 &#x4F4D;&#x5143;&#x7684;&#x6642;&#x4EE3;&#xFF0C;
+&#x537B;&#x56E0;&#x70BA;&#x76F8;&#x5BB9;&#x6027;&#x7684;&#x95DC;&#x4FC2;&#x4ECD;&#x9700;&#x70BA; BIOS &#x4FDD;&#x7559; 16 &#x4F4D;&#x5143;&#x7684;&#x57F7;&#x884C;&#x65B9;&#x5F0F;&#xFF0C;
+&#x4E14;&#x9019;&#x5341;&#x591A;&#x5E74;&#x672A;&#x66FE;&#x6539;&#x8B8A;&#x7684; BIOS &#x7F3A;&#x4E4F;&#x7D71;&#x4E00;&#x6A19;&#x6E96;&#xFF0C;
+&#x5404;&#x5EE0;&#x5546;&#x9593;&#x898B;&#x62DB;&#x62C6;&#x62DB;&#x3001;&#x758A;&#x5E8A;&#x67B6;&#x5C4B;&#xFF0C;
+&#x4E5F;&#x5C31;&#x5439;&#x751F;&#x4E86;&#x7D71;&#x4E00;&#x53EF;&#x64F4;&#x5C55;&#x97CC;&#x9AD4;&#x4ECB;&#x9762; <a href="../../appendix/bilingual.html#&#x7D71;&#x4E00;&#x53EF;&#x64F4;&#x5C55;&#x97CC;&#x9AD4;&#x4ECB;&#x9762;">UEFI</a> &#x3002;</p><p><strong><em>&#x203B;
+  T&#x5BA2;&#x90A6;&#x8AAA;&#x9053;&#x4EE5; C &#x8A9E;&#x8A00;&#x5BEB;&#x7684; UEFI BIOS &#x9AD4;&#x7A4D;&#x589E;&#x5927;&#xFF0C;
+  &#x9023;&#x5E36;&#x4F7F;&#x5132;&#x5B58; BIOS &#x7684; <a href="../../appendix/bilingual.html#&#x96FB;&#x5B50;&#x62B9;&#x9664;&#x5F0F;&#x53EF;&#x8907;&#x5BEB;&#x552F;&#x8B80;&#x8A18;&#x61B6;&#x9AD4;">EEPROM</a>
+  &#x6676;&#x7247;&#x9700;&#x8981;&#x64F4;&#x589E;&#xFF0C;
+  &#x800C;&#x95DC;&#x65BC;&#x6676;&#x7247;&#x5C31;&#x662F;&#x82F1;&#x7279;&#x723E;&#x64C5;&#x9577;&#x7684;&#x7BC4;&#x570D;&#x3002;</em></strong></p><h3 id="uefi-&#x7684;&#x597D;&#x8655;">UEFI &#x7684;&#x597D;&#x8655;</h3><blockquote><p>&#x539F;&#x6587;&#xFF1A; <a href="https://msdn.microsoft.com/zh-tw/library/hh824898.aspx" target="_blank">UEFI &#x97CC;&#x9AD4; - &#x5FAE;&#x8EDF;&#x958B;&#x767C;&#x8005;&#x7DB2;&#x8DEF;</a></p></blockquote><ul><li>&#x8F03;&#x5FEB;&#x7684;&#x958B;&#x6A5F;&#x548C;&#x7E7C;&#x7E8C;&#x6642;&#x9593;&#x3002;
+</li>
+<li>&#x80FD;&#x5920;&#x4F7F;&#x7528;&#x5B89;&#x5168;&#x6027;&#x529F;&#x80FD;&#xFF0C; &#x4F8B;&#x5982;&#xFF1A; &#x9032;&#x884C;&#x5B89;&#x5168;&#x958B;&#x6A5F;&#x3001;&#x4F7F;&#x7528;&#x539F;&#x5EE0;&#x52A0;&#x5BC6;&#x7684;&#x78C1;&#x789F;&#x6A5F;&#x3002;
+</li>
+<li>&#x80FD;&#x5920;&#x66F4;&#x8F15;&#x6613;&#x5730;&#x652F;&#x63F4;&#x5927;&#x578B;&#x786C;&#x789F; (&#x8D85;&#x904E; 2 TB) &#x548C;&#x5177;&#x5099;&#x56DB;&#x500B;&#x4EE5;&#x4E0A;&#x78C1;&#x789F;&#x5206;&#x5272;&#x7684;&#x78C1;&#x789F;&#x6A5F;&#x3002;
+&#xFF08;&#x9019;&#x90E8;&#x5206;&#x8207; GPT &#x6709;&#x95DC;&#x4FC2;&#x3002;&#xFF09;
+</li>
+<li>&#x8207;&#x820A;&#x7248; BIOS &#x7684;&#x76F8;&#x5BB9;&#x6027;&#x3002;
+&#x6709;&#x4E00;&#x4E9B; UEFI &#x578B;&#x96FB;&#x8166;&#x5305;&#x542B;&#x76F8;&#x5BB9;&#x6027;&#x652F;&#x63F4;&#x6A21;&#x7D44; (CSM)&#xFF0C;
+&#x53EF;&#x4EE5;&#x6A21;&#x64EC;&#x820A;&#x7248; BIOS&#xFF0C; &#x70BA;&#x4F7F;&#x7528;&#x8005;&#x63D0;&#x4F9B;&#x66F4;&#x591A;&#x5F48;&#x6027;&#x548C;&#x76F8;&#x5BB9;&#x6027;&#x3002;
+</li>
+<li>&#x652F;&#x63F4;&#x591A;&#x9EDE;&#x50B3;&#x9001;&#x90E8;&#x7F72;&#xFF0C;
+&#x8B93;&#x96FB;&#x8166;&#x88FD;&#x9020;&#x5546;&#x80FD;&#x5920;&#x5EE3;&#x64AD;&#x53EF;&#x900F;&#x904E;&#x591A;&#x90E8;&#x96FB;&#x8166;&#x63A5;&#x6536;&#x7684;&#x96FB;&#x8166;&#x6620;&#x50CF;&#xFF0C;
+&#x800C;&#x4E0D;&#x6703;&#x8B93;&#x7DB2;&#x8DEF;&#x6216;&#x6620;&#x50CF;&#x4F3A;&#x670D;&#x5668;&#x7206;&#x6EFF;&#x3002;
+</li>
+<li>&#x652F;&#x63F4; UEFI &#x97CC;&#x9AD4;&#x9A45;&#x52D5;&#x7A0B;&#x5F0F;&#x3001;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x53CA; Option ROM&#x3002;
+</li></ul>
+<h2 id="&#x78C1;&#x789F;&#x5206;&#x5340;&#x8868;">&#x78C1;&#x789F;&#x5206;&#x5340;&#x8868;</h2><p>&#x78C1;&#x789F;&#x5206;&#x5340;&#x8868;&#x5305;&#x542B;&#x958B;&#x6A5F;&#x7BA1;&#x7406;&#x7A0B;&#x5F0F;&#x8207;<a href="../../appendix/bilingual.html#&#x78C1;&#x789F;&#x5206;&#x5340;">&#x78C1;&#x789F;&#x5206;&#x5340;</a>&#x8CC7;&#x8A0A;&#x5169;&#x90E8;&#x5206;&#xFF0C;
+&#x76EE;&#x524D;&#x6709; &#x4E3B;&#x958B;&#x6A5F;&#x7D00;&#x9304; <a href="../../appendix/bilingual.html#&#x4E3B;&#x958B;&#x6A5F;&#x7D00;&#x9304;">MBR</a>
+&#x3001; &#x5168;&#x5C40;&#x552F;&#x4E00;&#x8B58;&#x5225;&#x78BC;&#x5206;&#x5340;&#x8868; <a href="../../appendix/bilingual.html#&#x5168;&#x5C40;&#x552F;&#x4E00;&#x8B58;&#x5225;&#x78BC;&#x5206;&#x5340;&#x8868;">GPT</a>
+&#x5169;&#x7A2E;&#x6A19;&#x6E96;&#x3002;</p><p>GPT &#x76F8;&#x5BB9;&#x65BC; MBR&#xFF0C; &#x70BA; UEFI &#x6240;&#x63A1;&#x7528;&#x7684;&#x5206;&#x5340;&#x8868;&#xFF0C;
+&#x5176;&#x512A;&#x9EDE;&#x70BA;&#x80FD;&#x652F;&#x63F4;&#x8D85;&#x904E; 2.2 TB &#x7684;&#x786C;&#x789F;&#x548C;&#x6709; 128 &#x500B;&#x78C1;&#x789F;&#x5206;&#x5340;&#x3002;</p><table>
+<thead>
+<tr><th>&#x9805;&#x76EE;</th>
+<th>&#x4E3B;&#x958B;&#x6A5F;&#x7D00;&#x9304;</th>
+<th>&#x5168;&#x5C40;&#x552F;&#x4E00;&#x8B58;&#x5225;&#x78BC;&#x5206;&#x5340;&#x8868;</th>
+</tr></thead><tbody>
+<tr><td style="text-align:left">&#x4F54;&#x4F4D;&#x7A7A;&#x9593;</td>
+<td style="text-align:center">512 &#x4F4D;&#x5143;&#x7D44; * 1</td>
+<td style="text-align:center">512 &#x4F4D;&#x5143;&#x7D44; * ( 34 + 33 )</td>
+</tr><tr><td style="text-align:left">&#x5206;&#x5340;&#x6578;&#x91CF;</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">128</td>
+</tr></tbody></table>
+
+<p><strong><em>&#x203B;
+  &#x5728;&#x4F7F;&#x7528; &#x4E3B;&#x958B;&#x6A5F;&#x7D00;&#x9304; &#x6642;&#x9700;&#x53BB;&#x5728;&#x610F;&#x7684; &#x4E3B;&#x8981;&#x5206;&#x5340;&#x3001;&#x5EF6;&#x4F38;&#x5206;&#x5340;&#x3001;&#x908F;&#x8F2F;&#x5206;&#x5340;
+  &#x7684;&#x6982;&#x5FF5;&#x5728;&#x4F7F;&#x7528;&#x591A;&#x5206;&#x5340;&#x6578;&#x91CF;&#x7684;
+  &#x5168;&#x5C40;&#x552F;&#x4E00;&#x8B58;&#x5225;&#x78BC;&#x5206;&#x5340;&#x8868; &#x6642;&#x61C9;&#x8A72;&#x6703;&#x6108;&#x4F86;&#x6108;&#x5C11;&#x6703;&#x88AB;&#x7528;&#x5230;&#x3002;</em></strong></p><p>&#x66F4;&#x8A73;&#x7D30;&#x8CC7;&#x6599;&#x53EF;&#x898B;&#xFF1A;</p><ul><li><a href="http://linux.vbird.org/linux_basic/0130designlinux.php#partition_table" target="_blank">&#x9CE5;&#x54E5;&#x7684; Linux &#x79C1;&#x623F;&#x83DC; -- &#x7B2C;&#x4E8C;&#x7AE0;&#x3001;&#x4E3B;&#x6A5F;&#x898F;&#x5283;&#x8207;&#x78C1;&#x789F;&#x5206;&#x5272; # MSDOS(MBR) &#x8207; GPT &#x78C1;&#x789F;&#x5206;&#x5272;&#x8868;(partition table)</a>
+</li>
+<li><a href="https://zh.wikipedia.org/wiki/GUID&#x78C1;&#x789F;&#x5206;&#x5272;&#x8868;" target="_blank">GUID&#x78C1;&#x789F;&#x5206;&#x5272;&#x8868; - &#x7DAD;&#x57FA;&#x767E;&#x79D1;</a>
+</li>
+<li><a href="https://www.techbang.com/posts/14126" target="_blank">&#x5927;&#x5BB9;&#x91CF;&#x786C;&#x789F;&#x3001;UEFI &#x7CFB;&#x7D71;&#x9032;&#x968E;&#x73A9;&#x6CD5;&#xFF1A;GPT / MBR &#x5206;&#x5272;&#x8868;&#x683C;&#x5F0F;&#x7121;&#x640D;&#x8F15;&#x9B06;&#x4E92;&#x8F49; | T&#x5BA2;&#x90A6;</a>
+</li></ul>
+<h2 id="&#x53C3;&#x8003;">&#x53C3;&#x8003;</h2><ul><li><a href="https://www.techbang.com/posts/4359" target="_blank">&#x5373;&#x5C07;&#x63DB;&#x6389;&#x50B3;&#x7D71; BIOS &#x7684; UEFI&#xFF0C;&#x4F60;&#x61C2;&#x4E86;&#x55CE;&#xFF1F;&#xFF08;&#x4E8C;&#xFF09; | T&#x5BA2;&#x90A6;</a>
+</li>
+<li><a href="https://zh.wikipedia.org/wiki/&#x7D71;&#x4E00;&#x53EF;&#x5EF6;&#x4F38;&#x97CC;&#x9AD4;&#x4ECB;&#x9762;" target="_blank">&#x7D71;&#x4E00;&#x53EF;&#x5EF6;&#x4F38;&#x97CC;&#x9AD4;&#x4ECB;&#x9762; - &#x7DAD;&#x57FA;&#x767E;&#x79D1;</a>
+</li>
+<li><a href="http://linux.vbird.org/linux_basic/0130designlinux.php#partition_bios_uefi" target="_blank">&#x9CE5;&#x54E5;&#x7684; Linux &#x79C1;&#x623F;&#x83DC; -- &#x7B2C;&#x4E8C;&#x7AE0;&#x3001;&#x4E3B;&#x6A5F;&#x898F;&#x5283;&#x8207;&#x78C1;&#x789F;&#x5206;&#x5272; # &#x958B;&#x6A5F;&#x6D41;&#x7A0B;&#x4E2D;&#x7684; BIOS &#x8207; UEFI &#x958B;&#x6A5F;&#x6AA2;&#x6E2C;&#x7A0B;&#x5F0F;</a>
+</li>
+<li><a href="http://linux.vbird.org/linux_basic/0130designlinux.php#partition_table" target="_blank">&#x9CE5;&#x54E5;&#x7684; Linux &#x79C1;&#x623F;&#x83DC; -- &#x7B2C;&#x4E8C;&#x7AE0;&#x3001;&#x4E3B;&#x6A5F;&#x898F;&#x5283;&#x8207;&#x78C1;&#x789F;&#x5206;&#x5272; # MSDOS(MBR) &#x8207; GPT &#x78C1;&#x789F;&#x5206;&#x5272;&#x8868;(partition table)</a>
+</li>
+<li><a href="https://zh.wikipedia.org/wiki/GUID&#x78C1;&#x789F;&#x5206;&#x5272;&#x8868;" target="_blank">GUID&#x78C1;&#x789F;&#x5206;&#x5272;&#x8868; - &#x7DAD;&#x57FA;&#x767E;&#x79D1;</a>
+</li></ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 安裝">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="disk_partition.html" class="navigation navigation-next " aria-label="Next page: 磁碟分區">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"UEFI、MBR、GPT 區別","level":"1.3.1","depth":2,"next":{"title":"磁碟分區","level":"1.3.2","depth":2,"path":"content/install/disk_partition.md","ref":"content/install/disk_partition.md","articles":[]},"previous":{"title":"安裝","level":"1.3","depth":1,"path":"content/install/README.md","ref":"content/install/README.md","articles":[{"title":"UEFI、MBR、GPT 區別","level":"1.3.1","depth":2,"path":"content/install/uefi_mbr_gpt_difference.md","ref":"content/install/uefi_mbr_gpt_difference.md","articles":[]},{"title":"磁碟分區","level":"1.3.2","depth":2,"path":"content/install/disk_partition.md","ref":"content/install/disk_partition.md","articles":[]},{"title":"安裝指南","level":"1.3.3","depth":2,"path":"content/install/installation_guide.md","ref":"content/install/installation_guide.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/install/uefi_mbr_gpt_difference.md","mtime":"2017-08-08T04:07:02.885Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2017-08-11T09:57:02.115Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
