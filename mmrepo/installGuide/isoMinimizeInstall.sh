@@ -177,14 +177,52 @@ echo -e "四． 配置系統 Configure the system\n"
             echo "    建立開機映像："
             echo "        mkinitcpio -p linux"
             echo
-            echo "    安裝開機程式："
-            echo "        pacman -S grub-bios"
-            echo "        grub-install --target=i386-pc --recheck /dev/sda"
-            echo "        grub-mkconfig -o /boot/grub/grub.cfg"
+
+            forBIOS() {
+                echo "    安裝開機程式："
+                echo "        pacman -S grub-bios"
+                echo "        grub-install --target=i386-pc --recheck /dev/sda"
+                echo "        grub-mkconfig -o /boot/grub/grub.cfg"
+            }
+
+            forUEFI() {
+                echo "    建立開機程式："
+                echo "        bootctl install"
+                echo "        vim /boot/loader/loader.conf"
+                echo "            default arch"
+                echo "            timeout 4"
+                echo "        vim /boot/loader/entries/arch.conf"
+                echo "            title Archlinux"
+                echo "            linux /vmlinuz-linux"
+                echo "            initrd /initramfs-linux.img"
+                echo "            options root=PARTUUID=xxx rw"
+                echo "            （關於最後一行 options root=PARTUUID=xxx rw 中的 xxx 請查找 blkid 命令中 / 跟目錄的 PARTUUID。）"
+            }
+
+            case $1 in
+                BIOS)
+                    forBIOS
+                    ;;
+                UEFI)
+                    forUEFI
+                    ;;
+            esac
+
             echo
+            echo "    離開 chroot："
+            echo "        exit"
 
             arch-chroot /mnt
     esac
+
+
+echo
+echo
+echo -e "恭喜你 congratulations\n"
+
+echo "接下來你只需要："
+echo "    卸載 /mnt： umount -R /mnt"
+echo "    重啟機器（似乎可以免拔映像檔）： systemctl reboot"
 
 
 exit 0

@@ -7,7 +7,7 @@
         <title>磁碟分區 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.1">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -160,7 +160,20 @@
                 <a href="installation_guide.html">
             
                     
-                    安裝指南
+                    安裝指南 BIOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="installation_guide_uefi.html">
+            
+                <a href="installation_guide_uefi.html">
+            
+                    
+                    安裝指南 UEFI
             
                 </a>
             
@@ -270,51 +283,70 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x78C1;&#x789F;&#x5206;&#x5340;">&#x78C1;&#x789F;&#x5206;&#x5340;</h1><blockquote><p>2017.08.08</p></blockquote><h2 id="&#x9801;&#x7C64;">&#x9801;&#x7C64;</h2><ul><li><a href="#&#x5206;&#x5340;&#x5C0D;&#x9F4A;">&#x5206;&#x5340;&#x5C0D;&#x9F4A;</a>
-</li>
-<li><a href="#&#x547D;&#x4EE4;">&#x547D;&#x4EE4;</a>
-</li>
-<li><a href="#&#x683C;&#x5F0F;&#x5316;">&#x683C;&#x5F0F;&#x5316;</a>
-</li>
-<li><a href="#&#x7B46;&#x8005;&#x73FE;&#x6CC1;&#x53C3;&#x8003;">&#x7B46;&#x8005;&#x73FE;&#x6CC1;&#x53C3;&#x8003;</a>
-</li>
-<li><a href="#&#x53C3;&#x8003;">&#x53C3;&#x8003;</a>
-</li></ul>
-<h2 id="&#x5206;&#x5340;&#x5C0D;&#x9F4A;">&#x5206;&#x5340;&#x5C0D;&#x9F4A;</h2><p>&#x78C1;&#x789F;&#x662F;&#x6709;&#x6700;&#x5C0F;&#x7684;&#x8B80;&#x53D6;&#x55AE;&#x4F4D;&#x7684;&#xFF0C; &#x901A;&#x5E38;&#x662F; 512byte &#x6216;&#x662F; 4KB&#xFF0C;
+                                <h1 id="&#x78C1;&#x789F;&#x5206;&#x5340;">&#x78C1;&#x789F;&#x5206;&#x5340;</h1>
+<blockquote>
+<p>2017.08.08</p>
+</blockquote>
+<h2 id="&#x9801;&#x7C64;">&#x9801;&#x7C64;</h2>
+<ul>
+<li><a href="#&#x5206;&#x5340;&#x5C0D;&#x9F4A;">&#x5206;&#x5340;&#x5C0D;&#x9F4A;</a></li>
+<li><a href="#&#x547D;&#x4EE4;">&#x547D;&#x4EE4;</a></li>
+<li><a href="#&#x683C;&#x5F0F;&#x5316;">&#x683C;&#x5F0F;&#x5316;</a></li>
+<li><a href="#&#x7B46;&#x8005;&#x73FE;&#x6CC1;&#x53C3;&#x8003;">&#x7B46;&#x8005;&#x73FE;&#x6CC1;&#x53C3;&#x8003;</a></li>
+<li><a href="#&#x53C3;&#x8003;">&#x53C3;&#x8003;</a></li>
+</ul>
+<h2 id="&#x5206;&#x5340;&#x5C0D;&#x9F4A;">&#x5206;&#x5340;&#x5C0D;&#x9F4A;</h2>
+<p>&#x78C1;&#x789F;&#x662F;&#x6709;&#x6700;&#x5C0F;&#x7684;&#x8B80;&#x53D6;&#x55AE;&#x4F4D;&#x7684;&#xFF0C; &#x901A;&#x5E38;&#x662F; 512byte &#x6216;&#x662F; 4KB&#xFF0C;
 &#x800C;&#x6240;&#x8B02;&#x7684;&#x5C0D;&#x9F4A;&#x5C31;&#x662F;&#x4EE5;&#x6700;&#x5C0F;&#x8B80;&#x53D6;&#x55AE;&#x4F4D;&#x7684;&#x500D;&#x6578;&#x53BB;&#x5283;&#x5206;&#x78C1;&#x5340;&#x3002;
 &#x9019;&#x5C0D;&#x56FA;&#x614B;&#x786C;&#x789F;&#x4F86;&#x8AAA;&#x66F4;&#x70BA;&#x91CD;&#x8981;&#xFF0C;
 &#x56FA;&#x614B;&#x786C;&#x789F;&#x7684;&#x5FEB;&#x9583;&#x8A18;&#x61B6;&#x9AD4;&#x662F;&#x6709;&#x8B80;&#x5BEB;&#x6B21;&#x6578;&#x7684;&#x6975;&#x9650;&#x7684;&#xFF0C;
 &#x8D85;&#x904E;&#x6027;&#x80FD;&#x4FBF;&#x6703;&#x4E0B;&#x964D;&#x751A;&#x81F3;&#x5831;&#x5EE2;&#xFF0C;
-&#x6B63;&#x78BA;&#x7684;&#x5206;&#x5340;&#x5C0D;&#x9F4A;&#x53EF;&#x907F;&#x514D;&#x4E00;&#x4E9B;&#x7121;&#x8B02;&#x7684;&#x8B80;&#x5BEB;&#x52D5;&#x4F5C;&#x3002;</p><p><a href="https://wiki.archlinux.org/index.php/Partitioning_(&#x7B80;&#x4F53;&#x4E2D;&#x6587;%29#.E5.88.86.E5.8C.BA.E5.B7.A5.E5.85.B7_2" target="_blank">ArchWiki</a>
+&#x6B63;&#x78BA;&#x7684;&#x5206;&#x5340;&#x5C0D;&#x9F4A;&#x53EF;&#x907F;&#x514D;&#x4E00;&#x4E9B;&#x7121;&#x8B02;&#x7684;&#x8B80;&#x5BEB;&#x52D5;&#x4F5C;&#x3002;</p>
+<p><a href="https://wiki.archlinux.org/index.php/Partitioning_(&#x7B80;&#x4F53;&#x4E2D;&#x6587;%29#.E5.88.86.E5.8C.BA.E5.B7.A5.E5.85.B7_2" target="_blank">ArchWiki</a>
 &#x8AAA; <code>fdisk</code>&#x3001;<code>gdisk</code>&#x3001;<code>gparted</code>&#x3001;<code>parted</code> &#x7B49;&#x5E38;&#x7528;&#x5DE5;&#x5177;&#x5DF2;&#x53EF;&#x81EA;&#x52D5;&#x8655;&#x7406;&#x5C0D;&#x9F4A;&#xFF0C;
 &#x4F46;&#x6211;&#x7684;&#x7406;&#x89E3;&#x662F; 512B &#x500D;&#x6578;&#x7684;&#x70BA; 512B &#x5C0D;&#x9F4A;&#xFF1B; 4K &#x500D;&#x6578;&#x7684;&#x70BA; 4K &#x5C0D;&#x9F4A;&#xFF0C;
 &#x800C; <code>fdisk</code> &#x5141;&#x8A31;&#x8A2D;&#x5B9A; 2049 &#x70BA;&#x8D77;&#x59CB;&#x9EDE;&#xFF0C; &#x4E0D;&#x7B26;&#x5408; 512B &#x5C0D;&#x9F4A;&#xFF1F;&#xFF01;
 <code>gdisk</code> &#x5141;&#x8A31;&#x8A2D;&#x5B9A;&#x5206;&#x5340;&#x5927;&#x5C0F;&#x70BA; 1K&#xFF0C; &#x4E0D;&#x7B26;&#x5408; 4K &#x5C0D;&#x9F4A;&#xFF1F;&#xFF01;
-&#x7591;&#x60D1;&#x5440;&#xFF1F;</p><p>&#x76F8;&#x95DC;&#x6587;&#x7AE0;&#x898B;&#xFF1A;</p><ul><li><a href="https://wiki.archlinux.org/index.php/Partitioning_(&#x7B80;&#x4F53;&#x4E2D;&#x6587;%29#.E5.88.86.E5.8C.BA.E5.AF.B9.E9.BD.90" target="_blank">Partitioning # &#x5206;&#x5340;&#x5C0D;&#x9F4A; - ArchWiki</a>
-</li>
-<li><a href="https://wiki.archlinux.org/index.php/Advanced_Format" target="_blank">Advanced Format - ArchWiki</a>
-</li></ul>
-<h3 id="&#x9A57;&#x8B49;&#x662F;&#x5426;&#x5C0D;&#x9F4A;&#x547D;&#x4EE4;">&#x9A57;&#x8B49;&#x662F;&#x5426;&#x5C0D;&#x9F4A;&#x547D;&#x4EE4;</h3><pre><code>$ parted /dev/sda
+&#x7591;&#x60D1;&#x5440;&#xFF1F;</p>
+<p>&#x76F8;&#x95DC;&#x6587;&#x7AE0;&#x898B;&#xFF1A;</p>
+<ul>
+<li><a href="https://wiki.archlinux.org/index.php/Partitioning_(&#x7B80;&#x4F53;&#x4E2D;&#x6587;%29#.E5.88.86.E5.8C.BA.E5.AF.B9.E9.BD.90" target="_blank">Partitioning # &#x5206;&#x5340;&#x5C0D;&#x9F4A; - ArchWiki</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Advanced_Format" target="_blank">Advanced Format - ArchWiki</a></li>
+</ul>
+<h3 id="&#x9A57;&#x8B49;&#x662F;&#x5426;&#x5C0D;&#x9F4A;&#x547D;&#x4EE4;">&#x9A57;&#x8B49;&#x662F;&#x5426;&#x5C0D;&#x9F4A;&#x547D;&#x4EE4;</h3>
+<pre><code>$ parted /dev/sda
 (parted) align-check optimal 1   # 1 &#x8868;&#x793A; /dev/sda1 &#x7684;&#x610F;&#x601D;
-1 aligned   # &#x6709;&#x5C0D;&#x9F4A;</code></pre>
-<h2 id="&#x547D;&#x4EE4;">&#x547D;&#x4EE4;</h2><p>&#x5404;&#x985E;&#x76F8;&#x95DC;&#x547D;&#x4EE4;&#x8207;&#x5176;&#x64CD;&#x4F5C;&#x5F62;&#x5F0F;&#x4E00;&#x89BD;&#xFF1A;</p><table>
+1 aligned   # &#x6709;&#x5C0D;&#x9F4A;
+</code></pre><h2 id="&#x547D;&#x4EE4;">&#x547D;&#x4EE4;</h2>
+<p>&#x5404;&#x985E;&#x76F8;&#x95DC;&#x547D;&#x4EE4;&#x8207;&#x5176;&#x64CD;&#x4F5C;&#x5F62;&#x5F0F;&#x4E00;&#x89BD;&#xFF1A;</p>
+<table>
 <thead>
-<tr><th>&#x64CD;&#x4F5C;&#x5F62;&#x5F0F;</th>
-<th>&#x4E3B;&#x958B;&#x6A5F;&#x7D00;&#x9304;</th>
-<th>&#x5168;&#x5C40;&#x552F;&#x4E00;&#x8B58;&#x5225;&#x78BC;&#x5206;&#x5340;&#x8868;</th>
-</tr></thead><tbody>
-<tr><td style="text-align:left">&#x547D;&#x4EE4;</td>
+<tr>
+<th style="text-align:left">&#x64CD;&#x4F5C;&#x5F62;&#x5F0F;</th>
+<th style="text-align:left">&#x4E3B;&#x958B;&#x6A5F;&#x7D00;&#x9304;</th>
+<th style="text-align:left">&#x5168;&#x5C40;&#x552F;&#x4E00;&#x8B58;&#x5225;&#x78BC;&#x5206;&#x5340;&#x8868;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"> &#x547D;&#x4EE4;</td>
 <td style="text-align:left">sfdisk&#x3001;parted</td>
 <td style="text-align:left">sfdisk&#x3001;sgdisk&#x3001;parted</td>
-</tr><tr><td style="text-align:left">&#x5C0D;&#x8A71;</td>
+</tr>
+<tr>
+<td style="text-align:left"> &#x5C0D;&#x8A71;</td>
 <td style="text-align:left">fdisk&#x3001;parted</td>
 <td style="text-align:left">fdisk&#x3001;gdisk&#x3001;parted</td>
-</tr><tr><td style="text-align:left">&#x6587;&#x5B57;&#x985E;&#x5716;&#x5F62;&#x4ECB;&#x9762;</td>
+</tr>
+<tr>
+<td style="text-align:left"> &#x6587;&#x5B57;&#x985E;&#x5716;&#x5F62;&#x4ECB;&#x9762;</td>
 <td style="text-align:left">cfdisk</td>
 <td style="text-align:left">cfdisk&#x3001;cgdisk</td>
-</tr></tbody></table>
-
-<p>&#x7B46;&#x8005;&#x6700;&#x5F8C;&#x9078;&#x7528; <code>fdisk</code> &#x547D;&#x4EE4;&#xFF0C; &#x4EE5;&#x4E0B;&#x70BA;&#x4F7F;&#x7528;&#x53C3;&#x8003;&#xFF1A;</p><pre><code>$ fdisk /dev/sda
+</tr>
+</tbody>
+</table>
+<p>&#x7B46;&#x8005;&#x6700;&#x5F8C;&#x9078;&#x7528; <code>fdisk</code> &#x547D;&#x4EE4;&#xFF0C; &#x4EE5;&#x4E0B;&#x70BA;&#x4F7F;&#x7528;&#x53C3;&#x8003;&#xFF1A;</p>
+<pre><code>$ fdisk /dev/sda
 welcome to fdisk (util-linux 2.30.1)
 Changes will remain in memory only, until you decide to write them.
 Be careful before using the write command.
@@ -381,9 +413,13 @@ Disklabel type: dos                                          # &#x4F7F;&#x7528; 
 Disk identifier: 0x9cc1856d
 
 Device    Boot Start      End  Sectors Size Id Type
-/dev/sda1       2048 67108863 67106816  32G 83 Linux</code></pre>
-<blockquote><p>&#x8A3B;&#xFF1A; &#x5982;&#x679C;&#x6709;&#x56DB;&#x500B;&#x4EE5;&#x4E0A;&#x7684;&#x5206;&#x5340;&#x9700;&#x6C42;&#x5EFA;&#x8B70;&#x4F7F;&#x7528; GPT &#x5206;&#x5340;&#x8868;&#xFF0C;
-  &#x800C;&#x6709;&#x95DC;&#x4E3B;&#x8981;&#x5206;&#x5340;&#x3001;&#x5EF6;&#x4F38;&#x5206;&#x5340;&#x9019;&#x5B78;&#x554F;&#x5C31;&#x7565;&#x904E;&#x5427;&#x3002;</p></blockquote><p>&#x67E5;&#x770B;&#x5206;&#x5340;&#x72C0;&#x614B;&#xFF1A;</p><pre><code>$ fdisk -l
+/dev/sda1       2048 67108863 67106816  32G 83 Linux
+</code></pre><blockquote>
+<p>&#x8A3B;&#xFF1A; &#x5982;&#x679C;&#x6709;&#x56DB;&#x500B;&#x4EE5;&#x4E0A;&#x7684;&#x5206;&#x5340;&#x9700;&#x6C42;&#x5EFA;&#x8B70;&#x4F7F;&#x7528; GPT &#x5206;&#x5340;&#x8868;&#xFF0C;
+  &#x800C;&#x6709;&#x95DC;&#x4E3B;&#x8981;&#x5206;&#x5340;&#x3001;&#x5EF6;&#x4F38;&#x5206;&#x5340;&#x9019;&#x5B78;&#x554F;&#x5C31;&#x7565;&#x904E;&#x5427;&#x3002;</p>
+</blockquote>
+<p>&#x67E5;&#x770B;&#x5206;&#x5340;&#x72C0;&#x614B;&#xFF1A;</p>
+<pre><code>$ fdisk -l
 Disk /dev/sda: 8 GiB, 8589934592 bytes, 16777216 sectors
 Units: sectors of 1 * 512 = 512 bytes
 Sector size (logical/physical): 512 bytes / 512 bytes
@@ -395,12 +431,15 @@ Device     Boot    Start      End Sectors  Size Id Type
 /dev/sda1           2048  1050623 1048576  512M 83 Linux
 /dev/sda2        1050624  7342079 6291456    3G 83 Linux
 /dev/sda3        7342080 14657535 7315456  3.5G 83 Linux
-/dev/sda4       14657536 16777215 2119680    1G 83 Linux</code></pre>
-<h2 id="&#x683C;&#x5F0F;&#x5316;">&#x683C;&#x5F0F;&#x5316;</h2><p>&#x683C;&#x5F0F;&#x5316;&#x9019;&#x6B65;&#x9A5F;&#x4E5F;&#x662F;&#x5728;&#x5EFA;&#x7F6E;&#x8A72;&#x5206;&#x5340;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7D71;&#x3002;
+/dev/sda4       14657536 16777215 2119680    1G 83 Linux
+</code></pre><h2 id="&#x683C;&#x5F0F;&#x5316;">&#x683C;&#x5F0F;&#x5316;</h2>
+<p>&#x683C;&#x5F0F;&#x5316;&#x9019;&#x6B65;&#x9A5F;&#x4E5F;&#x662F;&#x5728;&#x5EFA;&#x7F6E;&#x8A72;&#x5206;&#x5340;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7D71;&#x3002;
 &#x5176;&#x547D;&#x4EE4;&#x6709; <a href="http://linux.vbird.org/linux_basic/0230filesystem.php#format" target="_blank"><code>mkfs</code></a>
 &#x3001; <a href="http://linux.vbird.org/linux_basic/0230filesystem.php#swap" target="_blank"><code>mkswap</code></a>
-&#x5169;&#x985E;&#x3002;</p><p>&#x95DC;&#x65BC;&#x53EF;&#x7528;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7D71;&#x898B;&#xFF1A;
-  <a href="https://wiki.archlinux.org/index.php/File_systems" target="_blank">File systems - ArchWiki</a> &#x3002;</p><pre><code>$ mkfs.ext4 /dev/sda1
+&#x5169;&#x985E;&#x3002;</p>
+<p>&#x95DC;&#x65BC;&#x53EF;&#x7528;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7D71;&#x898B;&#xFF1A;
+  <a href="https://wiki.archlinux.org/index.php/File_systems" target="_blank">File systems - ArchWiki</a> &#x3002;</p>
+<pre><code>$ mkfs.ext4 /dev/sda1
 mke2fs 1.43.4 (31-Jan-2017)
 Creating filesystem with 131072 4k blocks and 32768 inodes
 Filesystem UUID: d28375fe-0170-4b25-b40e-cf609a74a4aa
@@ -410,8 +449,8 @@ Superblock backups stored on blocks:
 Allocating group tables: done
 Writing inode tables: done
 Creating journal (4096 blocks): done
-writing superblocks and filesystem accounting information: done</code></pre>
-<pre><code>$ mkswap /dev/sda4   # &#x683C;&#x5F0F;&#x5316;
+writing superblocks and filesystem accounting information: done
+</code></pre><pre><code>$ mkswap /dev/sda4   # &#x683C;&#x5F0F;&#x5316;
 Setting up swapspace version 1, size = 2 GiB (2146430976 bytes)
 no label, UUID=4aaa4e3e-69e3-44a3-a91b-f023deb9e34a
 
@@ -424,13 +463,17 @@ $ swapon /dev/sda4   # &#x555F;&#x7528;
 $ free
               total        used        free      shared  buff/cache   available
 Mem:         743736      143612      289056      113976      310944      377580
-Swap:       2096124           0     2096124</code></pre>
-<blockquote><p>&#x8A3B;&#xFF1A; &#x95DC;&#x65BC; <code>free</code> &#x547D;&#x4EE4;&#x898B;&#xFF1A;
+Swap:       2096124           0     2096124
+</code></pre><blockquote>
+<p>&#x8A3B;&#xFF1A; &#x95DC;&#x65BC; <code>free</code> &#x547D;&#x4EE4;&#x898B;&#xFF1A;
   &#x9CE5;&#x54E5;&#x7684; Linux &#x79C1;&#x623F;&#x83DC;
   <a href="http://linux.vbird.org/linux_basic/0230filesystem.php#swap" target="_blank">&#x7B2C;&#x4E03;&#x7AE0;&#x3001;Linux &#x78C1;&#x789F;&#x8207;&#x6A94;&#x6848;&#x7CFB;&#x7D71;&#x7BA1;&#x7406; # swap</a>
   &#x3001;
   <a href="http://linux.vbird.org/linux_basic/0440processcontrol.php#free" target="_blank">&#x7B2C;&#x5341;&#x516D;&#x7AE0;&#x3001;&#x7A0B;&#x5E8F;&#x7BA1;&#x7406;&#x8207; SELinux &#x521D;&#x63A2; # free</a>
-  &#x3002;</p></blockquote><p>&#x67E5;&#x770B;&#x78C1;&#x789F;&#x8CC7;&#x8A0A;&#xFF1A;</p><pre><code>$ lsblk
+  &#x3002;</p>
+</blockquote>
+<p>&#x67E5;&#x770B;&#x78C1;&#x789F;&#x8CC7;&#x8A0A;&#xFF1A;</p>
+<pre><code>$ lsblk
 NAME         MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
 loop0          7:0    0   40G  1 loop /run/archiso/sfs/airootfs
 sda            8:0    0   32G  0 disk
@@ -448,86 +491,104 @@ sda
 |-sda2 ext4                 (&#x7565;)                   /mnt
 |-sda3 ext4                 (&#x7565;)                   /mnt/home
 |-sda4 swap                 (&#x7565;)                   [SWAP]
-sr0    iso9660  ARCH_201708 2017-08-01-13-16-28-00 /run/archiso/bootmnt</code></pre>
-<h3 id="btrfs-&#x6587;&#x4EF6;&#x7CFB;&#x7D71;">Btrfs &#x6587;&#x4EF6;&#x7CFB;&#x7D71;</h3><p>&#x7531;&#x65BC;&#x9CE5;&#x54E5;&#x5728;
+sr0    iso9660  ARCH_201708 2017-08-01-13-16-28-00 /run/archiso/bootmnt
+</code></pre><h3 id="btrfs-&#x6587;&#x4EF6;&#x7CFB;&#x7D71;">Btrfs &#x6587;&#x4EF6;&#x7CFB;&#x7D71;</h3>
+<p>&#x7531;&#x65BC;&#x9CE5;&#x54E5;&#x5728;
 <a href="http://linux.vbird.org/linux_basic/0157installcentos7.php#centos_5" target="_blank">&#x7B2C;&#x4E09;&#x7AE0; - &#x5B89;&#x88DD; CentOS7.x</a>
 &#x4E2D;&#x63D0;&#x5230;&#x4E26;&#x65BC;
 <a href="http://linux.vbird.org/linux_basic/0230filesystem.php#harddisk-xfs" target="_blank">&#x7B2C;&#x4E03;&#x7AE0; - Linux &#x78C1;&#x789F;&#x8207;&#x6A94;&#x6848;&#x7CFB;&#x7D71;&#x7BA1;&#x7406;</a>
-&#x7684;&#x6A94;&#x6848;&#x7CFB;&#x7D71;&#x4ECB;&#x7D39;&#x4E2D;&#x518D;&#x6B21;&#x8AAA;&#x660E; EXT &#x5BB6;&#x65CF;&#x6703;&#x6F38;&#x6F38;&#x5F0F;&#x5FAE;&#x7684;&#x539F;&#x56E0;&#x3002;</p><p>&#x9019;&#x4E5F;&#x8B93;&#x6211;&#x95DC;&#x5FC3;&#x7684;&#x67E5;&#x4E86;&#x67E5;&#x8CC7;&#x6599;&#xFF0C;&#x7D50;&#x679C;&#x767C;&#x73FE;&#x53C8;&#x6709;&#x65B0;&#x7684;&#x6A94;&#x6848;&#x7CFB;&#x7D71;&#x88AB;&#x767C;&#x5C55;&#x51FA;&#x4F86;&#x4E86;&#xFF1A;</p><ul><li><a href="https://wiki.archlinux.org/index.php/Btrfs" target="_blank">Btrfs - ArchWiki</a>
-</li>
-<li><a href="https://www.ptt.cc/bbs/Linux/M.1492431791.A.D8C.html" target="_blank">[&#x554F;&#x984C;] Apple&#x63A8;&#x51FA;APFS&#x90A3;linux&#x6709;&#x5176;&#x4ED6;FS&#x53EF;&#x4EE5;&#x6BD4;&#x8F03;&#x55CE; - &#x770B;&#x677F; Linux - &#x6279;&#x8E22;&#x8E22;&#x5BE6;&#x696D;&#x574A;</a>
-</li></ul>
+&#x7684;&#x6A94;&#x6848;&#x7CFB;&#x7D71;&#x4ECB;&#x7D39;&#x4E2D;&#x518D;&#x6B21;&#x8AAA;&#x660E; EXT &#x5BB6;&#x65CF;&#x6703;&#x6F38;&#x6F38;&#x5F0F;&#x5FAE;&#x7684;&#x539F;&#x56E0;&#x3002;</p>
+<p>&#x9019;&#x4E5F;&#x8B93;&#x6211;&#x95DC;&#x5FC3;&#x7684;&#x67E5;&#x4E86;&#x67E5;&#x8CC7;&#x6599;&#xFF0C;&#x7D50;&#x679C;&#x767C;&#x73FE;&#x53C8;&#x6709;&#x65B0;&#x7684;&#x6A94;&#x6848;&#x7CFB;&#x7D71;&#x88AB;&#x767C;&#x5C55;&#x51FA;&#x4F86;&#x4E86;&#xFF1A;</p>
+<ul>
+<li><a href="https://wiki.archlinux.org/index.php/Btrfs" target="_blank">Btrfs - ArchWiki</a></li>
+<li><a href="https://www.ptt.cc/bbs/Linux/M.1492431791.A.D8C.html" target="_blank">[&#x554F;&#x984C;] Apple&#x63A8;&#x51FA;APFS&#x90A3;linux&#x6709;&#x5176;&#x4ED6;FS&#x53EF;&#x4EE5;&#x6BD4;&#x8F03;&#x55CE; - &#x770B;&#x677F; Linux - &#x6279;&#x8E22;&#x8E22;&#x5BE6;&#x696D;&#x574A;</a></li>
+</ul>
 <p>&#x5728; ArchWiki
 <a href="https://wiki.archlinux.org/index.php/Partitioning_(&#x7B80;&#x4F53;&#x4E2D;&#x6587;%29#Btrfs_.E5.88.86.E5.8C.BA" target="_blank">Partitioning # Btrfs</a>
 &#x4E2D;&#x9084;&#x8AAA;&#x9053;&#x9019;&#x662F;&#x8981;&#x66FF;&#x4EE3; MBR &#x548C; GPT &#x5206;&#x5340;&#x7684;&#x65B9;&#x6848;&#xFF0C;
-&#x54A6;&#xFF5E; &#x5206;&#x5340;&#x8868;&#x3001;&#x6587;&#x4EF6;&#x7CFB;&#x7D71;&#xFF1F;&#xFF01;</p><h2 id="&#x7B46;&#x8005;&#x73FE;&#x6CC1;&#x53C3;&#x8003;">&#x7B46;&#x8005;&#x73FE;&#x6CC1;&#x53C3;&#x8003;</h2><p>Linux &#x76EE;&#x524D;&#x898F;&#x5283;&#x5728; VMware &#x865B;&#x64EC;&#x6A5F;&#x3001;&#x6A39;&#x8393;&#x6D3E;&#x3001;&#x5099;&#x7528;&#x96FB;&#x8166; &#x4F7F;&#x7528;&#xFF0C;
+&#x54A6;&#xFF5E; &#x5206;&#x5340;&#x8868;&#x3001;&#x6587;&#x4EF6;&#x7CFB;&#x7D71;&#xFF1F;&#xFF01;</p>
+<h2 id="&#x7B46;&#x8005;&#x73FE;&#x6CC1;&#x53C3;&#x8003;">&#x7B46;&#x8005;&#x73FE;&#x6CC1;&#x53C3;&#x8003;</h2>
+<p>Linux &#x76EE;&#x524D;&#x898F;&#x5283;&#x5728; VMware &#x865B;&#x64EC;&#x6A5F;&#x3001;&#x6A39;&#x8393;&#x6D3E;&#x3001;&#x5099;&#x7528;&#x96FB;&#x8166; &#x4F7F;&#x7528;&#xFF0C;
 &#x800C; VMware &#x514D;&#x8CBB;&#x7248;&#x7121;&#x6CD5;&#x6A21;&#x64EC; UEFI &#x53BB;&#x505A;&#x7DF4;&#x7FD2;&#xFF0C;
 &#x800C;&#x786C;&#x789F;&#x5BB9;&#x91CF;&#x61C9;&#x8A72;&#x4E5F;&#x4E0D;&#x6703;&#x8CB7;&#x8D85;&#x904E; 2TB&#xFF0C;
-UEFI &#x8207; GPT &#x61C9;&#x8A72;&#x662F;&#x9BAE;&#x5C11;&#x6709;&#x6A5F;&#x6703;&#x78B0;&#x5230;&#x3002;</p><blockquote><p>&#x8A3B;&#xFF1A; &#x95DC;&#x65BC; VMware &#x7684; UEFI &#x898B;&#xFF1A;</p><ul><li><a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-898217D4-689D-4EB5-866C-888353FE241C.html" target="_blank">Enable or Disable UEFI Secure Boot for a Virtual Machine</a>
-</li>
-<li><a href="https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=2048332" target="_blank">&#x865B;&#x64EC;&#x6A5F;&#x786C;&#x4EF6;&#x7248;&#x672C;&#xFF08;2048332&#xFF09;| VMware KB</a>
-</li>
-<li><a href="https://www.symantec.com/connect/forums/boot-pxe-uefi-virtual-machine-vmware-workstation-12" target="_blank">Boot to PXE, UEFI, from virtual machine (VMWare Workstation 12) | Symantec Connect Community</a>
-</li>
-<li><a href="https://community.ivanti.com/docs/DOC-27736" target="_blank">How to enable UEFI in VMWare Workstation | Ivanti User Community</a>
-</li></ul>
-</blockquote><p>&#x9810;&#x8A08;&#x5283;&#x5206;&#x56DB;&#x500B;&#x78C1;&#x5340;&#xFF1A;</p><ul><li><code>/boot</code>&#xFF1A; &#x958B;&#x6A5F;&#x76EE;&#x9304;&#x3002; &#x5176;&#x5305;&#x542B;&#x6709;&#x6838;&#x5FC3;&#x6A94;&#x6848;&#x3001;&#x958B;&#x6A5F;&#x9078;&#x55AE;&#x8207;&#x8A2D;&#x5B9A;&#x6A94; ... &#x7B49;&#x7B49;&#x3002;
-</li>
-<li><code>/</code>&#xFF1A; &#x6839;&#x76EE;&#x9304;&#x3002; &#x7CFB;&#x7D71;&#x4E00;&#x5207;&#x7684;&#x8D77;&#x59CB;&#x3002;
-</li>
-<li><code>/home</code>&#xFF1A; &#x5BB6;&#x76EE;&#x9304;&#x3002; &#x500B;&#x4EBA;&#x8CC7;&#x6599;&#x7684;&#x6240;&#x5728;&#x3002;
-</li>
-<li><code>swap</code>&#xFF1A; &#x8A18;&#x61B6;&#x9AD4;&#x7F6E;&#x63DB;&#x7A7A;&#x9593;&#x3002; &#x4EE5;&#x786C;&#x789F;&#x7A7A;&#x9593;&#x4EE3;&#x66FF;&#x8A18;&#x61B6;&#x9AD4;&#x4F7F;&#x7528;&#x3002;
-</li></ul>
+UEFI &#x8207; GPT &#x61C9;&#x8A72;&#x662F;&#x9BAE;&#x5C11;&#x6709;&#x6A5F;&#x6703;&#x78B0;&#x5230;&#x3002;</p>
+<blockquote>
+<p>&#x8A3B;&#xFF1A; &#x95DC;&#x65BC; VMware &#x7684; UEFI &#x898B;&#xFF1A;</p>
+<ul>
+<li><a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-898217D4-689D-4EB5-866C-888353FE241C.html" target="_blank">Enable or Disable UEFI Secure Boot for a Virtual Machine</a></li>
+<li><a href="https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=2048332" target="_blank">&#x865B;&#x64EC;&#x6A5F;&#x786C;&#x4EF6;&#x7248;&#x672C;&#xFF08;2048332&#xFF09;| VMware KB</a></li>
+<li><a href="https://www.symantec.com/connect/forums/boot-pxe-uefi-virtual-machine-vmware-workstation-12" target="_blank">Boot to PXE, UEFI, from virtual machine (VMWare Workstation 12) | Symantec Connect Community</a></li>
+<li><a href="https://community.ivanti.com/docs/DOC-27736" target="_blank">How to enable UEFI in VMWare Workstation | Ivanti User Community</a></li>
+</ul>
+</blockquote>
+<p>&#x9810;&#x8A08;&#x5283;&#x5206;&#x56DB;&#x500B;&#x78C1;&#x5340;&#xFF1A;</p>
+<ul>
+<li><code>/boot</code>&#xFF1A; &#x958B;&#x6A5F;&#x76EE;&#x9304;&#x3002; &#x5176;&#x5305;&#x542B;&#x6709;&#x6838;&#x5FC3;&#x6A94;&#x6848;&#x3001;&#x958B;&#x6A5F;&#x9078;&#x55AE;&#x8207;&#x8A2D;&#x5B9A;&#x6A94; ... &#x7B49;&#x7B49;&#x3002;</li>
+<li><code>/</code>&#xFF1A; &#x6839;&#x76EE;&#x9304;&#x3002; &#x7CFB;&#x7D71;&#x4E00;&#x5207;&#x7684;&#x8D77;&#x59CB;&#x3002;</li>
+<li><code>/home</code>&#xFF1A; &#x5BB6;&#x76EE;&#x9304;&#x3002; &#x500B;&#x4EBA;&#x8CC7;&#x6599;&#x7684;&#x6240;&#x5728;&#x3002;</li>
+<li><code>swap</code>&#xFF1A; &#x8A18;&#x61B6;&#x9AD4;&#x7F6E;&#x63DB;&#x7A7A;&#x9593;&#x3002; &#x4EE5;&#x786C;&#x789F;&#x7A7A;&#x9593;&#x4EE3;&#x66FF;&#x8A18;&#x61B6;&#x9AD4;&#x4F7F;&#x7528;&#x3002;</li>
+</ul>
 <p>&#x800C;&#x820A;&#x6709;&#x70CF;&#x73ED;&#x5716;&#x7684;&#x73FE;&#x6CC1;&#xFF1A;
 <code>/boot</code> &#x76EE;&#x9304;&#x5360; 471MB&#xFF1B;
 &#x4E0D;&#x542B; <code>/home</code> &#x7684; <code>/</code> &#x76EE;&#x9304;&#x5360; 7GB &#x7684;&#x4F7F;&#x7528;&#x91CF;&#x3002;
-&#x6240;&#x4EE5;&#x61C9;&#x8A72;&#x6703;&#x662F;&#x4EE5;&#x4E0B;&#x898F;&#x5283;&#xFF1A;</p><table>
+&#x6240;&#x4EE5;&#x61C9;&#x8A72;&#x6703;&#x662F;&#x4EE5;&#x4E0B;&#x898F;&#x5283;&#xFF1A;</p>
+<table>
 <thead>
-<tr><th style="text-align:left">&#x78C1;&#x5340;&#x8A18;&#x9304;&#x5340;</th>
+<tr>
+<th style="text-align:left">&#x78C1;&#x5340;&#x8A18;&#x9304;&#x5340;</th>
 <th style="text-align:left">&#x639B;&#x8F09;</th>
 <th style="text-align:right">&#x6A94;&#x6848;&#x7CFB;&#x7D71;</th>
 <th style="text-align:right">&#x5927;&#x5C0F;</th>
-</tr></thead><tbody>
-<tr><td style="text-align:left">/dev/sda1</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"> /dev/sda1</td>
 <td style="text-align:left">/boot</td>
 <td style="text-align:right">ext4</td>
 <td style="text-align:right">384MB</td>
-</tr><tr><td style="text-align:left">/dev/sda2</td>
+</tr>
+<tr>
+<td style="text-align:left"> /dev/sda2</td>
 <td style="text-align:left">/</td>
 <td style="text-align:right">ext4</td>
 <td style="text-align:right">10GB</td>
-</tr><tr><td style="text-align:left">/dev/sda3</td>
+</tr>
+<tr>
+<td style="text-align:left"> /dev/sda3</td>
 <td style="text-align:left">/home</td>
 <td style="text-align:right">ext4</td>
 <td style="text-align:right">---</td>
-</tr><tr><td style="text-align:left">/dev/sda4</td>
+</tr>
+<tr>
+<td style="text-align:left"> /dev/sda4</td>
 <td style="text-align:left"></td>
 <td style="text-align:right">swap</td>
 <td style="text-align:right">2GB</td>
-</tr></tbody></table>
-
-<blockquote><p>&#x8A3B;&#xFF1A;
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>&#x8A3B;&#xFF1A;
   <a href="https://wiki.archlinux.org/index.php/Partitioning_(&#x7B80;&#x4F53;&#x4E2D;&#x6587;%29#.E5.88.86.E5.8C.BA.E5.BA.94.E8.AF.A5.E8.AE.BE.E7.BD.AE.E5.A4.9A.E5.A4.A7.EF.BC.9F" target="_blank">ArchWiki</a>
-  &#x8AAA; <code>/boot</code> &#x76EE;&#x9304;&#x5BE6;&#x969B;&#x9700;&#x6C42;&#x53EA;&#x6709; 100 MB&#x3002;</p><p>&#x8A3B;&#xFF1A;
+  &#x8AAA; <code>/boot</code> &#x76EE;&#x9304;&#x5BE6;&#x969B;&#x9700;&#x6C42;&#x53EA;&#x6709; 100 MB&#x3002;</p>
+<p>&#x8A3B;&#xFF1A;
   &#x7576;&#x786C;&#x9AD4;&#x652F;&#x63F4; UEFI &#x6642; <code>/boot</code> &#x6587;&#x4EF6;&#x7CFB;&#x7D71;&#x8ACB;&#x4F7F;&#x7528; <code>FAT32 (vfat)</code>&#x3002;
   &#x76F8;&#x95DC;&#x6587;&#x7AE0;&#x53EF;&#x898B;&#xFF1A;
   <a href="https://wiki.archlinux.org/index.php/File_systems#Create_a_file_system" target="_blank">File systems # Create a file system - ArchWiki</a>
   <a href="http://www.linuxquestions.org/questions/linux-hardware-18/efi-on-ext4-4175510688/" target="_blank">[SOLVED] EFI on ext4 ?</a>
-  &#x3002;</p></blockquote><h2 id="&#x53C3;&#x8003;">&#x53C3;&#x8003;</h2><ul><li><a href="https://wiki.archlinux.org/index.php/Partitioning" target="_blank">Partitioning - ArchWiki</a>
-</li>
-<li><a href="http://linux.vbird.org/linux_basic/0230filesystem.php#f.disk" target="_blank">&#x9CE5;&#x54E5;&#x7684; Linux &#x79C1;&#x623F;&#x83DC; -- &#x7B2C;&#x4E03;&#x7AE0;&#x3001;Linux &#x78C1;&#x789F;&#x8207;&#x6A94;&#x6848;&#x7CFB;&#x7D71;&#x7BA1;&#x7406; # &#x78C1;&#x789F;&#x5206;&#x5272;&#xFF1A; gdisk/fdisk</a>
-</li>
-<li><a href="https://zh.wikipedia.org/wiki/4K&#x5BF9;&#x9F50;" target="_blank">4K&#x5C0D;&#x9F4A; - &#x7DAD;&#x57FA;&#x767E;&#x79D1;</a>
-</li>
-<li><a href="http://linux.vbird.org/linux_basic/0230filesystem.php#format" target="_blank">&#x9CE5;&#x54E5;&#x7684; Linux &#x79C1;&#x623F;&#x83DC; -- &#x7B2C;&#x4E03;&#x7AE0;&#x3001;Linux &#x78C1;&#x789F;&#x8207;&#x6A94;&#x6848;&#x7CFB;&#x7D71;&#x7BA1;&#x7406; # &#x78C1;&#x789F;&#x683C;&#x5F0F;&#x5316;(&#x5EFA;&#x7F6E;&#x6A94;&#x6848;&#x7CFB;&#x7D71;)</a>
-</li>
-<li><a href="http://linux.vbird.org/linux_basic/0230filesystem.php#swap" target="_blank">&#x9CE5;&#x54E5;&#x7684; Linux &#x79C1;&#x623F;&#x83DC; -- &#x7B2C;&#x4E03;&#x7AE0;&#x3001;Linux &#x78C1;&#x789F;&#x8207;&#x6A94;&#x6848;&#x7CFB;&#x7D71;&#x7BA1;&#x7406; # swap</a>
-</li>
-<li><a href="http://linux.vbird.org/linux_basic/0157installcentos7.php#design" target="_blank">&#x9CE5;&#x54E5;&#x7684; Linux &#x79C1;&#x623F;&#x83DC; -- &#x7B2C;&#x4E09;&#x7AE0;&#x3001;&#x5B89;&#x88DD; CentOS7.x # &#x7DF4;&#x7FD2;&#x914D;&#x7F6E;</a>
-</li>
-<li><a href="http://linux.vbird.org/linux_basic/0210filepermission.php#dir_fhs_root" target="_blank">&#x9CE5;&#x54E5;&#x7684; Linux &#x79C1;&#x623F;&#x83DC; -- &#x7B2C;&#x4E94;&#x7AE0;&#x3001;Linux &#x7684;&#x6A94;&#x6848;&#x6B0A;&#x9650;&#x8207;&#x76EE;&#x9304;&#x914D;&#x7F6E; # &#x6839;&#x76EE;&#x9304;</a>
-</li></ul>
+  &#x3002;</p>
+</blockquote>
+<h2 id="&#x53C3;&#x8003;">&#x53C3;&#x8003;</h2>
+<ul>
+<li><a href="https://wiki.archlinux.org/index.php/Partitioning" target="_blank">Partitioning - ArchWiki</a></li>
+<li><a href="http://linux.vbird.org/linux_basic/0230filesystem.php#f.disk" target="_blank">&#x9CE5;&#x54E5;&#x7684; Linux &#x79C1;&#x623F;&#x83DC; -- &#x7B2C;&#x4E03;&#x7AE0;&#x3001;Linux &#x78C1;&#x789F;&#x8207;&#x6A94;&#x6848;&#x7CFB;&#x7D71;&#x7BA1;&#x7406; # &#x78C1;&#x789F;&#x5206;&#x5272;&#xFF1A; gdisk/fdisk</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/4K&#x5BF9;&#x9F50;" target="_blank">4K&#x5C0D;&#x9F4A; - &#x7DAD;&#x57FA;&#x767E;&#x79D1;</a></li>
+<li><a href="http://linux.vbird.org/linux_basic/0230filesystem.php#format" target="_blank">&#x9CE5;&#x54E5;&#x7684; Linux &#x79C1;&#x623F;&#x83DC; -- &#x7B2C;&#x4E03;&#x7AE0;&#x3001;Linux &#x78C1;&#x789F;&#x8207;&#x6A94;&#x6848;&#x7CFB;&#x7D71;&#x7BA1;&#x7406; # &#x78C1;&#x789F;&#x683C;&#x5F0F;&#x5316;(&#x5EFA;&#x7F6E;&#x6A94;&#x6848;&#x7CFB;&#x7D71;)</a></li>
+<li><a href="http://linux.vbird.org/linux_basic/0230filesystem.php#swap" target="_blank">&#x9CE5;&#x54E5;&#x7684; Linux &#x79C1;&#x623F;&#x83DC; -- &#x7B2C;&#x4E03;&#x7AE0;&#x3001;Linux &#x78C1;&#x789F;&#x8207;&#x6A94;&#x6848;&#x7CFB;&#x7D71;&#x7BA1;&#x7406; # swap</a></li>
+<li><a href="http://linux.vbird.org/linux_basic/0157installcentos7.php#design" target="_blank">&#x9CE5;&#x54E5;&#x7684; Linux &#x79C1;&#x623F;&#x83DC; -- &#x7B2C;&#x4E09;&#x7AE0;&#x3001;&#x5B89;&#x88DD; CentOS7.x # &#x7DF4;&#x7FD2;&#x914D;&#x7F6E;</a></li>
+<li><a href="http://linux.vbird.org/linux_basic/0210filepermission.php#dir_fhs_root" target="_blank">&#x9CE5;&#x54E5;&#x7684; Linux &#x79C1;&#x623F;&#x83DC; -- &#x7B2C;&#x4E94;&#x7AE0;&#x3001;Linux &#x7684;&#x6A94;&#x6848;&#x6B0A;&#x9650;&#x8207;&#x76EE;&#x9304;&#x914D;&#x7F6E; # &#x6839;&#x76EE;&#x9304;</a></li>
+</ul>
 
                                 
                                 </section>
@@ -560,7 +621,7 @@ UEFI &#x8207; GPT &#x61C9;&#x8A72;&#x662F;&#x9BAE;&#x5C11;&#x6709;&#x6A5F;&#x670
                 </a>
                 
                 
-                <a href="installation_guide.html" class="navigation navigation-next " aria-label="Next page: 安裝指南">
+                <a href="installation_guide.html" class="navigation navigation-next " aria-label="Next page: 安裝指南 BIOS">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -571,7 +632,7 @@ UEFI &#x8207; GPT &#x61C9;&#x8A72;&#x662F;&#x9BAE;&#x5C11;&#x6709;&#x6A5F;&#x670
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"磁碟分區","level":"1.3.2","depth":2,"next":{"title":"安裝指南","level":"1.3.3","depth":2,"path":"content/install/installation_guide.md","ref":"content/install/installation_guide.md","articles":[]},"previous":{"title":"UEFI、MBR、GPT 區別","level":"1.3.1","depth":2,"path":"content/install/uefi_mbr_gpt_difference.md","ref":"content/install/uefi_mbr_gpt_difference.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/install/disk_partition.md","mtime":"2017-08-11T09:53:12.347Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2017-08-11T09:57:02.115Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"磁碟分區","level":"1.3.2","depth":2,"next":{"title":"安裝指南 BIOS","level":"1.3.3","depth":2,"path":"content/install/installation_guide.md","ref":"content/install/installation_guide.md","articles":[]},"previous":{"title":"UEFI、MBR、GPT 區別","level":"1.3.1","depth":2,"path":"content/install/uefi_mbr_gpt_difference.md","ref":"content/install/uefi_mbr_gpt_difference.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/install/disk_partition.md","mtime":"2017-09-20T05:23:16.610Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-20T05:56:31.774Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
