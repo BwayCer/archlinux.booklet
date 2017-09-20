@@ -1,4 +1,4 @@
-安裝指南
+安裝指南 BIOS
 =======
 
 
@@ -9,78 +9,42 @@
 ## 前言
 
 
-新手報到， 這是筆者第一次使用命令安裝作業系統，
-少了「下一步」這小幫手可花我了許久的時間去重新認識 Linux，
-但還是有不少指令是模模糊糊跟著前人們複製貼上。
+如果系統環境為基本輸入輸出系統 [BIOS](/appendix/bilingual.md#基本輸入輸出系統)
+請參考此篇。
 
-
-最特別的就是映像檔的命令行 `root@archiso`，
-這可不是最後成果的命令行喔！
-`root@archiso` 這是映像檔的根管理員，
-預先幫忙連上了網路， 也預載了 `wget`、`openssh` ... 等等功能。
-
-還有喔！
-`pacstrap`、`arch-chroot` 這是只有映像檔才有的命令。
+這是筆者最初接觸的安裝方法，
+但現在改為統一可擴展韌體介面 [UEFI](/appendix/bilingual.md#統一可擴展韌體介面)
+的環境，
+所以將部分重點筆記移至
+[安裝指南 UEFI](content/install/installation_guide_uefi.md)
+的文章中。
 
 
 
 ## 頁籤
 
 
-* [啟用 SSH](#啟用-ssh)
+* [映像檔小幫手](#映像檔小幫手)
 * [最小化安裝](#最小化安裝)
 * [參考](#參考)
 
 
 
-## 啟用 SSH
+## 映像檔小幫手
 
 
-似乎未安裝圖形介面以前的命令行操作都相當不人性，
-且筆者又是以虛擬機工作，
-實在無法接受 文字太小、無法複製貼上、無法顯示中文 等問題，
-於是乎 Cygwin 加 [SSH](/appendix/bilingual.html#安全殼)
-已經是我必備的工具。
-
-
-```sh
-# 允許使用空密碼的 root 登入
-echo -e "PermitRootLogin yes\nPermitEmptyPasswords yes" >> /etc/ssh/sshd_config
-
-# 重啟程式
-systemctl restart sshd.socket
-```
-
-
-查看狀態：
-
-```sh
-# 檢查 "Local Address:Port" 位置上是否有 ":::22" 啟用 22 埠
-ss -tnlp
-
-ifconfig   # 查看網路位置
-```
-
-
-或者以程式執行：
-
-```sh
-wget https://bwaycer.github.io/archlinux.booklet/mmrepo/installGuide/sshLogin.sh
-sh ./sshLogin.sh
-```
+> 可以藉由筆者自製的
+> [映像檔小幫手](https://raw.githubusercontent.com/BwayCer/archlinux.booklet/gh-pages/mmrepo/installGuide/assistant.sh)
+> 來完成安裝作業：
+>
+> ```sh
+> wget goo.gl/pNhnVz -O assistant.sh
+> sh ./assistant.sh
+> ```
 
 
 
 ## 最小化安裝
-
-
-下述命令也可以透過下列程式執行：
-
-```sh
-wget https://bwaycer.github.io/archlinux.booklet/mmrepo/installGuide/isoSmall.sh
-sh ./isoSmall.sh
-```
-
 
 
 ### 磁碟劃分與配置：
@@ -180,7 +144,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
   1. 離開 `chroot`： `exit`
   2. 卸載 `/mnt`： `umount -R /mnt`
-  3. 重啟機器（似乎可以免拔映像檔）： `reboot`
+  3. 重啟機器（似乎可以免拔映像檔）： `systemctl reboot`
 
 
 

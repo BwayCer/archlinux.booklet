@@ -8,7 +8,8 @@ Summary
 * [安裝](content/install/README.md)
   * [UEFI、MBR、GPT 區別](content/install/uefi_mbr_gpt_difference.md)
   * [磁碟分區](content/install/disk_partition.md)
-  * [安裝指南](content/install/installation_guide.md)
+  * [安裝指南 BIOS](content/install/installation_guide.md)
+  * [安裝指南 UEFI](content/install/installation_guide_uefi.md)
 
 
 ---

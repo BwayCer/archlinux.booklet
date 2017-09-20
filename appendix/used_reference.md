@@ -62,17 +62,19 @@
         <li>連結：
             /mmrepo/installGuide/
             <br>
-            <a href="/mmrepo/installGuide/sshLogin.sh" target="_blank">
-                sshLogin.sh（啟用 SSH 登入）
+            <a href="/mmrepo/installGuide/assistant.sh" target="_blank">
+                assistant.sh（映像檔小幫手）
             </a>
             <br>
-            <a href="/mmrepo/installGuide/isoSmall.sh" target="_blank">
-                isoSmall.sh（Arch Linux 最小化安裝）
+            <a href="/mmrepo/installGuide/isoMinimizeInstall.sh" target="_blank">
+                isoMinimizeInstall.sh（Arch Linux 最小化安裝）
             </a>
         </li>
         <li>來源： 無</li>
         <li>使用頁面：
-            <a href="/content/install/installation_guide.md">安裝指南</a>
+            <a href="/content/install/installation_guide.md">安裝指南 BIOS</a>
+            、
+            <a href="/content/install/installation_guide_uefi.md">安裝指南 UEFI</a>
         </li>
     </ul>
 </div>
