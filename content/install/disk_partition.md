@@ -264,18 +264,7 @@ sr0    iso9660  ARCH_201708 2017-08-01-13-16-28-00 /run/archiso/bootmnt
 ## 筆者現況參考
 
 
-Linux 目前規劃在 VMware 虛擬機、樹莓派、備用電腦 使用，
-而 VMware 免費版無法模擬 UEFI 去做練習，
-而硬碟容量應該也不會買超過 2TB，
-UEFI 與 GPT 應該是鮮少有機會碰到。
-
-
-> 註： 關於 VMware 的 UEFI 見：
->  * [Enable or Disable UEFI Secure Boot for a Virtual Machine](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-898217D4-689D-4EB5-866C-888353FE241C.html)
->  * [虛擬機硬件版本（2048332）| VMware KB](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2048332)
->  * [Boot to PXE, UEFI, from virtual machine (VMWare Workstation 12) | Symantec Connect Community](https://www.symantec.com/connect/forums/boot-pxe-uefi-virtual-machine-vmware-workstation-12)
->  * [How to enable UEFI in VMWare Workstation | Ivanti User Community](https://community.ivanti.com/docs/DOC-27736)
-
+Linux 目前規劃在 VMware 虛擬機、樹莓派、備用電腦 等主機中使用。
 
 
 預計劃分四個磁區：
