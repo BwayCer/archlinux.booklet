@@ -10,6 +10,7 @@ Summary
   * [磁碟分區](content/install/disk_partition.md)
   * [安裝指南 BIOS](content/install/installation_guide.md)
   * [安裝指南 UEFI](content/install/installation_guide_uefi.md)
+  * [VMware 虛擬機](content/install/vmware.md)
 
 
 ---
