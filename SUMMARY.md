@@ -12,6 +12,8 @@ Summary
   * [安裝指南 UEFI](content/install/installation_guide_uefi.md)
   * [VMware 虛擬機](content/install/vmware.md)
 
+* [命令與操作](content/command_and_operation/README.md)
+  * [節點安裝](content/command_and_operation/nodejs_install.md)
 
 ---
 
