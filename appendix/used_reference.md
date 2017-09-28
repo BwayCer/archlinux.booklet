@@ -69,12 +69,16 @@
             <a href="/mmrepo/installGuide/isoMinimizeInstall.sh" target="_blank">
                 isoMinimizeInstall.sh（Arch Linux 最小化安裝）
             </a>
+            <br>
+            <a href="/mmrepo/installGuide/chRoot.sh" target="_blank">
+                chRoot.sh（Arch Linux 安裝 - 模擬目錄）
+            </a>
         </li>
         <li>來源： 無</li>
         <li>使用頁面：
-            <a href="/content/install/installation_guide.md">安裝指南 BIOS</a>
+            <a href="/content/install/iso_assistant.md">映像檔小幫手</a>
             、
-            <a href="/content/install/installation_guide_uefi.md">安裝指南 UEFI</a>
+            <a href="/content/install/installation_guide.md">安裝指南</a>
         </li>
     </ul>
 </div>
