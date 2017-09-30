@@ -12,6 +12,7 @@
 * [終端機](#終端機)
 * [Vim](#vim)
 * [Git](#git)
+* [Tmux](#tmux)
 
 
 
@@ -70,4 +71,11 @@ locale-gen
 pacman -Rs git
 pacman -S git
 ```
+
+
+
+## Tmux
+
+
+同 [終端機](#終端機) 。
 

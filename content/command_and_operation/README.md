@@ -15,4 +15,5 @@
   * [鳥哥的 Linux 私房菜 -- 第八章、檔案與檔案系統的壓縮,打包與備份](http://linux.vbird.org/linux_basic/0240tarcompress.php)
   * [凍仁的筆記: GNU / Linux 各種壓縮與解壓縮指令](http://note.drx.tw/2008/04/command.html)
 * [節點安裝](/content/command_and_operation/nodejs_install.md)
+* [亂碼](content/command_and_operation/mojibake.md)
 
