@@ -40,6 +40,8 @@ esac
 
 ## 是否使用 SSH
 
+echo
+echo
 printf "to link by ssh? (Y/N) :"
 read fontSize
 case $fontSize in
@@ -57,8 +59,10 @@ case $fontSize in
 esac
 
 
-## 載入最小安裝包
+## 載入安裝包
 
+echo
+echo
 printf "What installGuide do you need? (BIOS/UEFI) "
 
 $(ls /sys/firmware/efi > /dev/null 2>&1)
@@ -82,10 +86,12 @@ case $fontSize in
     S|skip) ;;
     B|BIOS|b|bios)
         wget https://bwaycer.github.io/archlinux.booklet/mmrepo/installGuide/isoMinimizeInstall.sh
+        wget https://bwaycer.github.io/archlinux.booklet/mmrepo/installGuide/chRoot.sh
         sh isoMinimizeInstall.sh BIOS
         ;;
     U|UEFI|u|uefi|EFI|efi)
         wget https://bwaycer.github.io/archlinux.booklet/mmrepo/installGuide/isoMinimizeInstall.sh
+        wget https://bwaycer.github.io/archlinux.booklet/mmrepo/installGuide/chRoot.sh
         sh isoMinimizeInstall.sh UEFI
         ;;
 esac

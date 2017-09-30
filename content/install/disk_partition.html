@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="installation_guide.html" />
+    <link rel="next" href="iso_assistant.html" />
     
     
     <link rel="prev" href="uefi_mbr_gpt_difference.html" />
@@ -155,12 +155,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="installation_guide.html">
+        <li class="chapter " data-level="1.3.3" data-path="iso_assistant.html">
             
-                <a href="installation_guide.html">
+                <a href="iso_assistant.html">
             
                     
-                    安裝指南 BIOS
+                    映像檔小幫手
             
                 </a>
             
@@ -168,12 +168,57 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="installation_guide_uefi.html">
+        <li class="chapter " data-level="1.3.4" data-path="installation_guide.html">
             
-                <a href="installation_guide_uefi.html">
+                <a href="installation_guide.html">
             
                     
-                    安裝指南 UEFI
+                    安裝指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="vmware.html">
+            
+                <a href="vmware.html">
+            
+                    
+                    VMware 虛擬機
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../command_and_operation/">
+            
+                <a href="../command_and_operation/">
+            
+                    
+                    命令與操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../command_and_operation/nodejs_install.html">
+            
+                <a href="../command_and_operation/nodejs_install.html">
+            
+                    
+                    節點安裝
             
                 </a>
             
@@ -508,19 +553,7 @@ sr0    iso9660  ARCH_201708 2017-08-01-13-16-28-00 /run/archiso/bootmnt
 &#x4E2D;&#x9084;&#x8AAA;&#x9053;&#x9019;&#x662F;&#x8981;&#x66FF;&#x4EE3; MBR &#x548C; GPT &#x5206;&#x5340;&#x7684;&#x65B9;&#x6848;&#xFF0C;
 &#x54A6;&#xFF5E; &#x5206;&#x5340;&#x8868;&#x3001;&#x6587;&#x4EF6;&#x7CFB;&#x7D71;&#xFF1F;&#xFF01;</p>
 <h2 id="&#x7B46;&#x8005;&#x73FE;&#x6CC1;&#x53C3;&#x8003;">&#x7B46;&#x8005;&#x73FE;&#x6CC1;&#x53C3;&#x8003;</h2>
-<p>Linux &#x76EE;&#x524D;&#x898F;&#x5283;&#x5728; VMware &#x865B;&#x64EC;&#x6A5F;&#x3001;&#x6A39;&#x8393;&#x6D3E;&#x3001;&#x5099;&#x7528;&#x96FB;&#x8166; &#x4F7F;&#x7528;&#xFF0C;
-&#x800C; VMware &#x514D;&#x8CBB;&#x7248;&#x7121;&#x6CD5;&#x6A21;&#x64EC; UEFI &#x53BB;&#x505A;&#x7DF4;&#x7FD2;&#xFF0C;
-&#x800C;&#x786C;&#x789F;&#x5BB9;&#x91CF;&#x61C9;&#x8A72;&#x4E5F;&#x4E0D;&#x6703;&#x8CB7;&#x8D85;&#x904E; 2TB&#xFF0C;
-UEFI &#x8207; GPT &#x61C9;&#x8A72;&#x662F;&#x9BAE;&#x5C11;&#x6709;&#x6A5F;&#x6703;&#x78B0;&#x5230;&#x3002;</p>
-<blockquote>
-<p>&#x8A3B;&#xFF1A; &#x95DC;&#x65BC; VMware &#x7684; UEFI &#x898B;&#xFF1A;</p>
-<ul>
-<li><a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-898217D4-689D-4EB5-866C-888353FE241C.html" target="_blank">Enable or Disable UEFI Secure Boot for a Virtual Machine</a></li>
-<li><a href="https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=2048332" target="_blank">&#x865B;&#x64EC;&#x6A5F;&#x786C;&#x4EF6;&#x7248;&#x672C;&#xFF08;2048332&#xFF09;| VMware KB</a></li>
-<li><a href="https://www.symantec.com/connect/forums/boot-pxe-uefi-virtual-machine-vmware-workstation-12" target="_blank">Boot to PXE, UEFI, from virtual machine (VMWare Workstation 12) | Symantec Connect Community</a></li>
-<li><a href="https://community.ivanti.com/docs/DOC-27736" target="_blank">How to enable UEFI in VMWare Workstation | Ivanti User Community</a></li>
-</ul>
-</blockquote>
+<p>Linux &#x76EE;&#x524D;&#x898F;&#x5283;&#x5728; VMware &#x865B;&#x64EC;&#x6A5F;&#x3001;&#x6A39;&#x8393;&#x6D3E;&#x3001;&#x5099;&#x7528;&#x96FB;&#x8166; &#x7B49;&#x4E3B;&#x6A5F;&#x4E2D;&#x4F7F;&#x7528;&#x3002;</p>
 <p>&#x9810;&#x8A08;&#x5283;&#x5206;&#x56DB;&#x500B;&#x78C1;&#x5340;&#xFF1A;</p>
 <ul>
 <li><code>/boot</code>&#xFF1A; &#x958B;&#x6A5F;&#x76EE;&#x9304;&#x3002; &#x5176;&#x5305;&#x542B;&#x6709;&#x6838;&#x5FC3;&#x6A94;&#x6848;&#x3001;&#x958B;&#x6A5F;&#x9078;&#x55AE;&#x8207;&#x8A2D;&#x5B9A;&#x6A94; ... &#x7B49;&#x7B49;&#x3002;</li>
@@ -621,7 +654,7 @@ UEFI &#x8207; GPT &#x61C9;&#x8A72;&#x662F;&#x9BAE;&#x5C11;&#x6709;&#x6A5F;&#x670
                 </a>
                 
                 
-                <a href="installation_guide.html" class="navigation navigation-next " aria-label="Next page: 安裝指南 BIOS">
+                <a href="iso_assistant.html" class="navigation navigation-next " aria-label="Next page: 映像檔小幫手">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -632,7 +665,7 @@ UEFI &#x8207; GPT &#x61C9;&#x8A72;&#x662F;&#x9BAE;&#x5C11;&#x6709;&#x6A5F;&#x670
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"磁碟分區","level":"1.3.2","depth":2,"next":{"title":"安裝指南 BIOS","level":"1.3.3","depth":2,"path":"content/install/installation_guide.md","ref":"content/install/installation_guide.md","articles":[]},"previous":{"title":"UEFI、MBR、GPT 區別","level":"1.3.1","depth":2,"path":"content/install/uefi_mbr_gpt_difference.md","ref":"content/install/uefi_mbr_gpt_difference.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/install/disk_partition.md","mtime":"2017-09-20T05:23:16.610Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-20T05:56:31.774Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"磁碟分區","level":"1.3.2","depth":2,"next":{"title":"映像檔小幫手","level":"1.3.3","depth":2,"path":"content/install/iso_assistant.md","ref":"content/install/iso_assistant.md","articles":[]},"previous":{"title":"UEFI、MBR、GPT 區別","level":"1.3.1","depth":2,"path":"content/install/uefi_mbr_gpt_difference.md","ref":"content/install/uefi_mbr_gpt_difference.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/install/disk_partition.md","mtime":"2017-09-30T09:35:44.867Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-30T11:47:15.674Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

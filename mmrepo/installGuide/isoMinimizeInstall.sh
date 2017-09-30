@@ -196,16 +196,30 @@ echo -e "四． 配置系統 Configure the system\n"
                 echo "            linux /vmlinuz-linux"
                 echo "            initrd /initramfs-linux.img"
                 echo "            options root=PARTUUID=xxx rw"
-                echo "            （關於最後一行 options root=PARTUUID=xxx rw 中的 xxx 請查找 blkid 命令中 / 跟目錄的 PARTUUID。）"
+                echo '            （關於最後一行 options root=PARTUUID=xxx rw 中的 xxx 請查找 "根目錄" 的 PARTUUID 取代 `blkid -s PARTUUID /dev/sdaX`。）'
             }
 
             case $1 in
                 BIOS)
                     forBIOS
+                    echo
+                    echo "或者請小幫手幫幫忙："
+                    echo "    cp chRoot.sh /mnt/"
+                    echo "    sh chRoot.sh BIOS $disk"
                     ;;
                 UEFI)
                     forUEFI
+                    echo
+                    echo "或者請小幫手幫幫忙："
+                    echo "    cp chRoot.sh /mnt/"
+                    echo "    sh chRoot.sh UEFI"
                     ;;
+                *)
+                    echo "    (BIOS)"
+                    forBIOS
+                    echo
+                    echo "    (UEFI)"
+                    forUEFI
             esac
 
             echo

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>安裝 · GitBook</title>
+        <title>節點安裝 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="uefi_mbr_gpt_difference.html" />
+    <link rel="next" href="../../appendix/" />
     
     
-    <link rel="prev" href="../archlinux.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -115,9 +115,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="./">
+        <li class="chapter " data-level="1.3" data-path="../install/">
             
-                <a href="./">
+                <a href="../install/">
             
                     
                     安裝
@@ -129,9 +129,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="uefi_mbr_gpt_difference.html">
+        <li class="chapter " data-level="1.3.1" data-path="../install/uefi_mbr_gpt_difference.html">
             
-                <a href="uefi_mbr_gpt_difference.html">
+                <a href="../install/uefi_mbr_gpt_difference.html">
             
                     
                     UEFI、MBR、GPT 區別
@@ -142,9 +142,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="disk_partition.html">
+        <li class="chapter " data-level="1.3.2" data-path="../install/disk_partition.html">
             
-                <a href="disk_partition.html">
+                <a href="../install/disk_partition.html">
             
                     
                     磁碟分區
@@ -155,9 +155,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="iso_assistant.html">
+        <li class="chapter " data-level="1.3.3" data-path="../install/iso_assistant.html">
             
-                <a href="iso_assistant.html">
+                <a href="../install/iso_assistant.html">
             
                     
                     映像檔小幫手
@@ -168,9 +168,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="installation_guide.html">
+        <li class="chapter " data-level="1.3.4" data-path="../install/installation_guide.html">
             
-                <a href="installation_guide.html">
+                <a href="../install/installation_guide.html">
             
                     
                     安裝指南
@@ -181,9 +181,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="vmware.html">
+        <li class="chapter " data-level="1.3.5" data-path="../install/vmware.html">
             
-                <a href="vmware.html">
+                <a href="../install/vmware.html">
             
                     
                     VMware 虛擬機
@@ -199,9 +199,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../command_and_operation/">
+        <li class="chapter " data-level="1.4" data-path="./">
             
-                <a href="../command_and_operation/">
+                <a href="./">
             
                     
                     命令與操作
@@ -213,9 +213,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../command_and_operation/nodejs_install.html">
+        <li class="chapter active" data-level="1.4.1" data-path="nodejs_install.html">
             
-                <a href="../command_and_operation/nodejs_install.html">
+                <a href="nodejs_install.html">
             
                     
                     節點安裝
@@ -313,7 +313,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >安裝</a>
+        <a href="../.." >節點安裝</a>
     </h1>
 </div>
 
@@ -328,8 +328,26 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5B89;&#x88DD;">&#x5B89;&#x88DD;</h1>
-
+                                <h1 id="&#x7BC0;&#x9EDE;&#x5B89;&#x88DD;">&#x7BC0;&#x9EDE;&#x5B89;&#x88DD;</h1>
+<h2 id="&#x9801;&#x7C64;">&#x9801;&#x7C64;</h2>
+<ul>
+<li><a href="#&#x7BC0;&#x9EDE;">&#x7BC0;&#x9EDE;</a></li>
+<li><a href="#nvm-&#x7248;&#x672C;&#x7BA1;&#x7406;&#x5668;">nvm &#x7248;&#x672C;&#x7BA1;&#x7406;&#x5668;</a></li>
+</ul>
+<h1 id="&#x7BC0;&#x9EDE;">&#x7BC0;&#x9EDE;</h1>
+<p>&#x7B46;&#x8005;&#x900F;&#x904E;&#x4E0B;&#x8F09;&#x4E8C;&#x9032;&#x5236;&#x5305;&#xFF08;<a href="https://nodejs.org/en/download/" target="_blank">&#x5B98;&#x65B9;&#x8F09;&#x9EDE;</a>&#xFF09;&#x9032;&#x884C;&#x5B89;&#x88DD;&#xFF0C;
+&#x900F;&#x904E;&#x5982;&#x4E0B;&#x6307;&#x4EE4;&#x89E3;&#x58D3;&#x7E2E;&#x4E26;&#x79FB;&#x52D5;&#x81F3; <code>/usr/local/</code> &#x76EE;&#x9304;&#x5C31;&#x5B8C;&#x6210;&#x4E86;&#x3002;</p>
+<pre><code>tar -xJf /mnt/vhost/nodejs/node-v8.5.0-linux-x64.tar.xz --strip-components 1 -C /usr/local/
+</code></pre><blockquote>
+<p>&#x8A3B;&#xFF1A; &#x8D77;&#x521D;&#x662F;&#x60F3;&#x8A66;&#x8A66;&#x7DE8;&#x8B6F;&#x6E90;&#x78BC;&#xFF0C; &#x4F46;&#x662F;&#x8DD1;&#x4E86;&#x597D;&#x4E45;&#xFF0C; &#x8DD1;&#x4E86;&#x597D;&#x4E45;&#xFF0C;
+&#x8DD1;&#x5230;&#x6211;&#x4EE5;&#x53E6;&#x4E00;&#x7A2E;&#x65B9;&#x5F0F;&#x5B8C;&#x6210;&#x5B89;&#x88DD;&#x5F8C;&#x5B83;&#x9084;&#x518D;&#x8DD1;&#xFF01; &#x5657;</p>
+</blockquote>
+<h1 id="nvm-&#x7248;&#x672C;&#x7BA1;&#x7406;&#x5668;">nvm &#x7248;&#x672C;&#x7BA1;&#x7406;&#x5668;</h1>
+<p><a href="https://github.com/creationix/nvm" target="_blank">GitHub: creationix/nvm</a></p>
+<p>&#x5B98;&#x65B9;&#x5DF2;&#x5BEB;&#x597D;&#x5B89;&#x88DD;&#x8173;&#x672C;&#xFF0C; &#x76F8;&#x7576;&#x65B9;&#x4FBF;&#x5462;&#xFF01;</p>
+<pre><code>curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+source ~/.bashrc
+</code></pre>
                                 
                                 </section>
                             
@@ -356,12 +374,12 @@
 
             
                 
-                <a href="../archlinux.html" class="navigation navigation-prev " aria-label="Previous page: Arch Linux">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 命令與操作">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="uefi_mbr_gpt_difference.html" class="navigation navigation-next " aria-label="Next page: UEFI、MBR、GPT 區別">
+                <a href="../../appendix/" class="navigation navigation-next " aria-label="Next page: 附錄">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -372,7 +390,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"安裝","level":"1.3","depth":1,"next":{"title":"UEFI、MBR、GPT 區別","level":"1.3.1","depth":2,"path":"content/install/uefi_mbr_gpt_difference.md","ref":"content/install/uefi_mbr_gpt_difference.md","articles":[]},"previous":{"title":"Arch Linux","level":"1.2","depth":1,"path":"content/archlinux.md","ref":"content/archlinux.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/install/README.md","mtime":"2017-09-30T09:35:44.874Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-30T11:47:15.674Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"節點安裝","level":"1.4.1","depth":2,"next":{"title":"附錄","level":"2.1","depth":1,"path":"appendix/README.md","ref":"appendix/README.md","articles":[{"title":"中譯詞彙對照","level":"2.1.1","depth":2,"path":"appendix/bilingual.md","ref":"appendix/bilingual.md","articles":[]},{"title":"多媒體資源參考","level":"2.1.2","depth":2,"path":"appendix/used_reference.md","ref":"appendix/used_reference.md","articles":[]}]},"previous":{"title":"命令與操作","level":"1.4","depth":1,"path":"content/command_and_operation/README.md","ref":"content/command_and_operation/README.md","articles":[{"title":"節點安裝","level":"1.4.1","depth":2,"path":"content/command_and_operation/nodejs_install.md","ref":"content/command_and_operation/nodejs_install.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/command_and_operation/nodejs_install.md","mtime":"2017-09-30T09:35:44.864Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-30T11:47:15.674Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
