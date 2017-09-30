@@ -14,6 +14,7 @@ Summary
 
 * [命令與操作](content/command_and_operation/README.md)
   * [節點安裝](content/command_and_operation/nodejs_install.md)
+  * [亂碼](content/command_and_operation/mojibake.md)
 
 ---
 
