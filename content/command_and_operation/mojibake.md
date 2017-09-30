@@ -79,3 +79,8 @@ pacman -S git
 
 同 [終端機](#終端機) 。
 
+```
+# 為使用 UTF-8 的錯誤訊息
+tmux: need UTF-8 locale (LC_CTYPE) but have ANSI_X3.4-1968
+```
+
