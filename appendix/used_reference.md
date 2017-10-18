@@ -27,6 +27,7 @@
 * [Arch Linux 標誌](#arch-linux-標誌)
 * [Arch Linux 安裝導引程式](#arch-linux-安裝導引程式)
 * [購買的樹莓派](#購買的樹莓派)
+* [Hypriot 標誌](#hypriot-標誌)
 
 
 
@@ -46,6 +47,8 @@
         </li>
         <li>使用頁面：
             <a href="/content/archlinux.md">Arch Linux</a>
+            、
+            <a href="/content/raspberry_pi_novice/rpi_os.md">作業系統</a>
         </li>
     </ul>
 </div>
@@ -100,6 +103,28 @@
         <li>來源： 張本微</li>
         <li>使用頁面：
             <a href="/content/raspberry_pi_novice/pick.md">選購</a>
+        </li>
+    </ul>
+</div>
+
+
+
+## Hypriot 標誌
+
+
+<div class="imgInfo">
+    <a href="/mmrepo/hypriot_logo.jpg" target="_blank">
+        <img src="/mmrepo/hypriot_logo.jpg" />
+    </a>
+    <ul>
+        <li>連結：
+            <a href="/mmrepo/hypriot_logo.jpg" target="_blank">/mmrepo/hypriot_logo.jpg</a>
+        </li>
+        <li>來源：
+            <a href="https://blog.hypriot.com/post/close-encounters-of-the-third-kind/">https://blog.hypriot.com/post/close-encounters-of-the-third-kind/</a>
+        </li>
+        <li>使用頁面：
+            <a href="/content/raspberry_pi_novice/rpi_os.md">作業系統</a>
         </li>
     </ul>
 </div>

@@ -17,6 +17,7 @@ Summary
 
 * [樹莓派見習生](content/raspberry_pi_novice/README.md)
   * [選購](content/raspberry_pi_novice/pick.md)
+  * [作業系統](content/raspberry_pi_novice/rpi_os.md)
 
 
 ---
