@@ -13,6 +13,8 @@ Summary
   * [VMware 虛擬機](content/install/vmware.md)
 
 * [命令與操作](content/command_and_operation/README.md)
+  * [ppp 程式包](content/command_and_operation/ppp.md)
+  * [固定網路協定位址](content/command_and_operation/static_ip.md)
   * [節點安裝](content/command_and_operation/nodejs_install.md)
 
 * [樹莓派見習生](content/raspberry_pi_novice/README.md)
