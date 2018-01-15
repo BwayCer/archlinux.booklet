@@ -15,6 +15,7 @@ Summary
 * [命令與操作](content/command_and_operation/README.md)
   * [ppp 程式包](content/command_and_operation/ppp.md)
   * [固定網路協定位址](content/command_and_operation/static_ip.md)
+  * [免費的安全通訊協定證書](content/command_and_operation/free_ssl.md)
   * [節點安裝](content/command_and_operation/nodejs_install.md)
 
 * [樹莓派見習生](content/raspberry_pi_novice/README.md)

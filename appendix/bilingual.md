@@ -14,6 +14,9 @@
 * [全局唯一識別碼分區表](#全局唯一識別碼分區表)
 * [安全殼](#安全殼)
 * [偉大的開機加載程式](#偉大的開機加載程式)
+* [套接字](#套接字)
+* [安全通訊協定](#安全通訊協定)
+* [傳輸層安全協議](#傳輸層安全協議)
 
 
 
@@ -149,5 +152,54 @@ _這用詞與實際功用落差甚大，筆者無法參透。_
 * 原文： 「GRand Unified Bootloader」（偉大的開機加載程式），簡稱「GRUB」。
 * 參考：
   無
+  。
+
+
+
+## 套接字
+
+
+電腦軟體中有關通訊功能的常用字， 但其正確意思筆者不清楚。
+
+
+* 原文： 「Socket」（套接字）。
+* 參考：
+  [Socket為什麼要翻譯成套接字？ - 知乎 ](https://www.zhihu.com/question/21383903)
+  、
+  [維基百科](http://zh.wikipedia.org/wiki/網路插座)
+  。
+
+
+
+## 安全通訊協定
+
+
+「SSL」的全名原為「Secure Sockets Layer」，
+譯作「安全套接字層」， 網路通訊協定的一項。
+而後來又發展出更安全的傳輸層安全協議 TLS 取代其功能，
+不過習慣上還是以 SSL 稱呼，
+所以其嚴格上來說以不具有原本意思。
+
+* 原文： 「SSL」。
+* 參考：
+  [國教院學術詞彙辭書](http://terms.naer.edu.tw/detail/1599331/?index=3)
+  、
+  [維基百科](http://zh.wikipedia.org/wiki/傳輸層安全性協定)
+  、
+  [什麼是 SSL、TLS 以及 HTTPS? | 賽門鐵克](https://www.symantec.com/zh/tw/page.jsp?id=ssl-information-center)
+  。
+
+
+
+
+## 傳輸層安全協議
+
+
+網路通訊協定的一項， 取代原先的安全套接字層 SSL。
+
+
+* 原文： 「Transport Layer Security」（傳輸層安全），簡稱「TLS」。
+* 參考：
+  [維基百科](http://zh.wikipedia.org/wiki/傳輸層安全協議)
   。
 
