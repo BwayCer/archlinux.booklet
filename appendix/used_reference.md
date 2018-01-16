@@ -64,24 +64,10 @@
     </a>
     <ul>
         <li>連結：
-            /mmrepo/installGuide/
-            <br>
-            <a href="/mmrepo/installGuide/assistant.sh" target="_blank">
-                assistant.sh（映像檔小幫手）
-            </a>
-            <br>
-            <a href="/mmrepo/installGuide/isoMinimizeInstall.sh" target="_blank">
-                isoMinimizeInstall.sh（Arch Linux 最小化安裝）
-            </a>
-            <br>
-            <a href="/mmrepo/installGuide/chRoot.sh" target="_blank">
-                chRoot.sh（Arch Linux 安裝 - 模擬目錄）
-            </a>
+            <a href="/mmrepo/installGuide/assistant.sh" target="_blank">/mmrepo/installGuide.sh</a>
         </li>
         <li>來源： 無</li>
         <li>使用頁面：
-            <a href="/content/install/iso_assistant.md">映像檔小幫手</a>
-            、
             <a href="/content/install/installation_guide.md">安裝指南</a>
         </li>
     </ul>

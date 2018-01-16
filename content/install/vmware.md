@@ -2,7 +2,7 @@ VMware 虛擬機
 =======
 
 
-> 2017.09.27
+> 2018.01.15
 
 <br>
 
@@ -26,9 +26,8 @@ VMware 虛擬機
 
 
 如果選用切分虛擬硬碟 split virtual disk，
-建議以一單位 7.9 GB 計算，
-這樣可以讓切分的檔案趨近 512 KB 的最大值。
-（筆者經驗， 無任何根據）
+單顆磁區大小最大為 4064 MB，
+但並沒有說容量越大越好， 或越小越好，
 
 
 
@@ -57,6 +56,9 @@ nvram            | 虛擬韌體檔案名稱。 （預設： `name.nvram`）
 firmware = "efi"      <-- 增加此行
 ```
 
+> 註： 視窗作業系統建議可以加 `efi.legacyBoot.enabled = "TRUE"`，
+> 筆者認為這對功能完整性有幫助， 但不清楚有什麼實質幫助。 XD
+
 
 
 ## 快照
@@ -69,13 +71,18 @@ firmware = "efi"      <-- 增加此行
 ## 虛擬機環境
 
 
-筆者使用 **git** 為虛擬機快照， 將 VMware 的檔案存放於
-[GitLab: BwayCer/gitVirtualMachine.vmware](https://gitlab.com/BwayCer/gitVirtualMachine.vmware)
-。
+過去筆者使用 **git** 為虛擬機快照，
+並將它放於沒有單一檔案大小及總容量限制的 [GitLab](https://gitlab.com/) ；
+而現在筆者只保留虛擬機文件作為備份之用，
+顯而易見的就是大大節省空間容量。
 
-**感謝 [GitLab](https://gitlab.com/) 沒有單一檔案大小及總容量限制。 開心 ^^**
+使用 **git** 雖然能快速建立或是選擇返回某個系統狀態，
+但現在面對問題筆者已經有信心可以從容的去處裡它，
+還有筆者做了個更進階的 [GitHub BwayCer/ditto.vm](https://github.com/BwayCer/ditto.vm)
+來處理建立虛擬機環境這苦差事。
 
-> 虛擬機檔案除了設定文件外都是二進位檔案，
+
+> 註： 虛擬機檔案除了設定文件外都是二進位檔案，
 > 二進位檔案對 Git 並不友善， 一小點變動都需要重新收錄，
 > 雖然已採用切分虛擬硬碟的方式，
 > 卻未感到有莫大的改善。（難道是學固態硬碟的分散的寫入方式嗎 XD）
