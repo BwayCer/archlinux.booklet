@@ -1,0 +1,646 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>固定網路協定位址 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="free_ssl.html" />
+    
+    
+    <link rel="prev" href="ppp.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../archlinux.html">
+            
+                <a href="../archlinux.html">
+            
+                    
+                    Arch Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../install/">
+            
+                <a href="../install/">
+            
+                    
+                    安裝
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../install/uefi_mbr_gpt_difference.html">
+            
+                <a href="../install/uefi_mbr_gpt_difference.html">
+            
+                    
+                    UEFI、MBR、GPT 區別
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../install/disk_partition.html">
+            
+                <a href="../install/disk_partition.html">
+            
+                    
+                    磁碟分區
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../install/installation_guide.html">
+            
+                <a href="../install/installation_guide.html">
+            
+                    
+                    安裝指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../install/vmware.html">
+            
+                <a href="../install/vmware.html">
+            
+                    
+                    VMware 虛擬機
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    命令與操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="ppp.html">
+            
+                <a href="ppp.html">
+            
+                    
+                    ppp 程式包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="static_ip.html">
+            
+                <a href="static_ip.html">
+            
+                    
+                    固定網路協定位址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="free_ssl.html">
+            
+                <a href="free_ssl.html">
+            
+                    
+                    免費的安全通訊協定證書
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="nodejs_install.html">
+            
+                <a href="nodejs_install.html">
+            
+                    
+                    節點安裝
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../raspberry_pi_novice/">
+            
+                <a href="../raspberry_pi_novice/">
+            
+                    
+                    樹莓派見習生
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../raspberry_pi_novice/pick.html">
+            
+                <a href="../raspberry_pi_novice/pick.html">
+            
+                    
+                    選購
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../raspberry_pi_novice/rpi_os.html">
+            
+                <a href="../raspberry_pi_novice/rpi_os.html">
+            
+                    
+                    作業系統
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../appendix/">
+            
+                <a href="../../appendix/">
+            
+                    
+                    附錄
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../appendix/bilingual.html">
+            
+                <a href="../../appendix/bilingual.html">
+            
+                    
+                    中譯詞彙對照
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../appendix/used_reference.html">
+            
+                <a href="../../appendix/used_reference.html">
+            
+                    
+                    多媒體資源參考
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >固定網路協定位址</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x56FA;&#x5B9A;&#x7DB2;&#x8DEF;&#x5354;&#x5B9A;&#x4F4D;&#x5740;">&#x56FA;&#x5B9A;&#x7DB2;&#x8DEF;&#x5354;&#x5B9A;&#x4F4D;&#x5740;</h1>
+<blockquote>
+<p>2017.11.04</p>
+</blockquote>
+<h2 id="&#x9801;&#x7C64;">&#x9801;&#x7C64;</h2>
+<ul>
+<li><a href="#&#x7C21;&#x4ECB;">&#x7C21;&#x4ECB;</a></li>
+<li><a href="#&#x64A5;&#x865F;&#x8A2D;&#x5B9A;">&#x64A5;&#x865F;&#x8A2D;&#x5B9A;</a></li>
+<li><a href="#&#x64A5;&#x865F;&#x9023;&#x7DDA;">&#x64A5;&#x865F;&#x9023;&#x7DDA;</a></li>
+<li><a href="#&#x9644;&#x4EF6;">&#x9644;&#x4EF6;</a><ul>
+<li><a href="#&#x67E5;&#x8A62;-ip">&#x67E5;&#x8A62; IP</a></li>
+<li><a href="#&#x5206;&#x4EAB;&#x5668;&#x8A2D;&#x5B9A;">&#x5206;&#x4EAB;&#x5668;&#x8A2D;&#x5B9A;</a></li>
+<li><a href="#&#x6210;&#x529F;&#x9023;&#x7DDA;&#x5F8C;&#x7684;&#x72C0;&#x614B;&#x8CC7;&#x8A0A;">&#x6210;&#x529F;&#x9023;&#x7DDA;&#x5F8C;&#x7684;&#x72C0;&#x614B;&#x8CC7;&#x8A0A;</a><ul>
+<li><a href="#netctl-&#x8CC7;&#x8A0A;">netctl &#x8CC7;&#x8A0A;</a></li>
+<li><a href="#pppd-&#x8CC7;&#x8A0A;">pppd &#x8CC7;&#x8A0A;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#&#x53C3;&#x8003;">&#x53C3;&#x8003;</a></li>
+</ul>
+<h2 id="&#x7C21;&#x4ECB;">&#x7C21;&#x4ECB;</h2>
+<p>&#x4EE5; PPPoE &#x64A5;&#x865F;&#x65B9;&#x5F0F;&#x53D6;&#x5F97;&#x5BE6;&#x9AD4;&#x56FA;&#x5B9A;&#x7DB2;&#x8DEF;&#x5354;&#x5B9A;&#x4F4D;&#x5740; IP &#x3002;</p>
+<blockquote>
+<p>&#x8A3B;&#xFF1A; &#x95DC;&#x65BC;&#x4E2D;&#x83EF;&#x96FB;&#x4FE1;&#x56FA;&#x5B9A; IP &#x7684;&#x7533;&#x8ACB;&#x8ACB;&#x898B;
+<a href="http://service.hinet.net/2004/adslstaticip.php" target="_blank">&#x975E;&#x56FA;&#x5B9A;&#x5236;&#x56FA;&#x5B9A;IP&#x914D;&#x767C;&#x670D;&#x52D9;</a> &#x3002;</p>
+</blockquote>
+<h2 id="&#x64A5;&#x865F;&#x8A2D;&#x5B9A;">&#x64A5;&#x865F;&#x8A2D;&#x5B9A;</h2>
+<p><strong>&#x5B89;&#x88DD; <code>ppp</code> &#x7A0B;&#x5F0F;&#x5305;&#xFF1A;</strong></p>
+<pre><code>pacman -S ppp
+</code></pre><p>&#x95DC;&#x65BC; <code>ppp</code> &#x7A0B;&#x5F0F;&#x5305;&#x66F4;&#x591A;&#x8CC7;&#x8A0A;&#x53EF;&#x898B;
+<a href="ppp.html">ppp &#x7A0B;&#x5F0F;&#x5305;</a> &#x3002;</p>
+<blockquote>
+<p>&#x8A3B;&#xFF1A; &#x7121;&#x9808;&#x4E0B;&#x8F09; <code>rp-pppoe</code> &#x7A0B;&#x5F0F;&#x5305;&#x3002;</p>
+</blockquote>
+<p><br></p>
+<p><strong>&#x7DE8;&#x5BEB; <code>/etc/netctl/your_profile</code>&#xFF1A;</strong></p>
+<pre><code>Description=&apos;Your PPPoE connection&apos;
+Interface=eth0
+Connection=pppoe
+User=&apos;***@ip.hinet.net&apos;
+Password=&apos;Hinet &#x5BC6;&#x78BC;&apos;
+
+# Always keep a connection established
+ConnectionMode=&apos;persist&apos;
+# Establish connection on demand
+#ConnectionMode=&apos;demand&apos;
+#IdleTimeout=300
+
+# Use default route provided by the peer (default: true)
+#DefaultRoute=true
+# Use DNS provided by the peer (default: true)
+#UsePeerDNS=true
+
+# Override default LCP parameters from /etc/ppp/options
+#LCPEchoInterval=15
+#LCPEchoFailure=10
+
+# PPPoE options - experts only
+#
+# PPPoE service name
+#PPPoEService=&apos;&apos;
+# PPPoE access concentrator name
+#PPPoEAC=&apos;&apos;
+# Attach to existing session (sessid:macaddr)
+#PPPoESession=&apos;&apos;
+# Only connect to specified MAC address
+#PPPoEMAC=&apos;&apos;
+# Enable IPv6 support
+#PPPoEIP6=yes
+</code></pre><ul>
+<li><code>PPPoE connection</code>&#xFF1A; &#x63CF;&#x8FF0;&#xFF0C; &#x672A;&#x77E5;&#x7528;&#x9014;&#x3002;</li>
+<li><code>eth0</code>&#xFF1A; &#x7DB2;&#x8DEF;&#x4ECB;&#x9762;&#x540D;&#x7A31;&#xFF0C; &#x7531; <code>ip addr</code> &#x67E5;&#x770B;&#x3002;</li>
+<li><code>***@ip.hinet.net</code>&#xFF1A; &#x64A5;&#x865F;&#x5E33;&#x6236;&#xFF0C; <code>@ip.hinet.net</code> &#x70BA;&#x767B;&#x5165; Hinet &#x56FA;&#x5B9A; IP &#x7684;&#x7528;&#x6236;&#x540D;&#x7A31;&#x3002;</li>
+<li><code>Hinet &#x5BC6;&#x78BC;</code>&#xFF1A; Hinet &#x5BC6;&#x78BC;&#x3002;</li>
+</ul>
+<blockquote>
+<p>&#x8A3B;&#xFF1A; &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8ACB;&#x53C3;&#x8003; <code>/etc/netctl/examples/pppoe</code>&#xFF1A;</p>
+<pre><code>cp /etc/netctl/examples/pppoe /etc/netctl/your_profile
+</code></pre></blockquote>
+<h2 id="&#x64A5;&#x865F;&#x9023;&#x7DDA;">&#x64A5;&#x865F;&#x9023;&#x7DDA;</h2>
+<p><strong>&#x91CD;&#x7F6E;&#x72C0;&#x614B;&#xFF1A;</strong></p>
+<pre><code>ip route del default    # &#x6E05;&#x9664;&#x5DF2;&#x914D;&#x7F6E;&#x7684;&#x9810;&#x8A2D;&#x8DEF;&#x7531;
+ip link set eth0 down   # &#x95DC;&#x9589;&#x64A5;&#x865F;&#x9023;&#x7DDA;&#x6240;&#x6307;&#x5B9A;&#x7684;&#x7DB2;&#x8DEF;&#x4ECB;&#x9762;
+</code></pre><p><strong>&#x67E5;&#x770B;&#x53EF;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;</strong></p>
+<pre><code>netctl list
+</code></pre><p><strong>&#x64A5;&#x865F;&#x9023;&#x7DDA;&#x8207;&#x95DC;&#x9589;&#xFF1A;</strong></p>
+<pre><code>netctl start your_profile   # &#x9023;&#x7DDA;
+netctl stop your_profile    # &#x95DC;&#x9589;&#x9023;&#x7DDA;
+</code></pre><p><strong>&#x958B;&#x6A5F;&#x6642;&#x81EA;&#x52D5;&#x64A5;&#x865F;&#x9023;&#x7DDA;&#xFF1A;</strong></p>
+<pre><code>netctl enable your_profile    # &#x81EA;&#x52D5;&#x9023;&#x7DDA;
+netctl disable your_profile   # &#x95DC;&#x9589;&#x81EA;&#x52D5;&#x9023;&#x7DDA;
+</code></pre><h2 id="&#x9644;&#x4EF6;">&#x9644;&#x4EF6;</h2>
+<h3 id="&#x67E5;&#x8A62;-ip">&#x67E5;&#x8A62; IP</h3>
+<p>&#x53EF;&#x7528;&#x5DE5;&#x5177;&#xFF1A;
+  <a href="http://dir.twseo.org/ip-check.php" target="_blank">IP &#x67E5;&#x8A62;&#x5DE5;&#x5177;</a>
+  &#x3001;
+  <a href="https://tool.magiclen.org/ip/" target="_blank">tool.magiclen.org/ip/</a>
+  &#x3002;</p>
+<pre><code>curl https://tool.magiclen.org/ip/; echo
+</code></pre><h3 id="&#x5206;&#x4EAB;&#x5668;&#x8A2D;&#x5B9A;">&#x5206;&#x4EAB;&#x5668;&#x8A2D;&#x5B9A;</h3>
+<p>&#x7531;&#x5206;&#x4EAB;&#x5668;&#x8A2D;&#x5B9A;&#x8F03;&#x70BA;&#x7C21;&#x6613;&#xFF0C;
+&#x900F;&#x904E;&#x5167;&#x5EFA;&#x7684; PPPoE &#x64A5;&#x865F;&#x7A0B;&#x5F0F;&#x53D6;&#x5F97;&#x56FA;&#x5B9A; IP&#xFF0C; &#x4E26;&#x8A2D;&#x5B9A;&#x9632;&#x706B;&#x7246;&#x5206;&#x914D;&#x7DB2;&#x8DEF;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>&#x66F4;&#x591A;&#x8CC7;&#x8A0A;&#x53EF;&#x898B;&#xFF1A;
+  <a href="https://forum.gamer.com.tw/Co.php?bsn=22797&amp;sn=10761" target="_blank">ZyXEL &#x5206;&#x4EAB;&#x5668;&#x7684; UDP &#x901A;&#x904E;&#x9632;&#x706B;&#x7246;&#x8A2D;&#x5B9A; - &#x5DF4;&#x54C8;&#x59C6;&#x7279;</a>
+  &#x3002;</p>
+<h3 id="&#x6210;&#x529F;&#x9023;&#x7DDA;&#x5F8C;&#x7684;&#x72C0;&#x614B;&#x8CC7;&#x8A0A;">&#x6210;&#x529F;&#x9023;&#x7DDA;&#x5F8C;&#x7684;&#x72C0;&#x614B;&#x8CC7;&#x8A0A;</h3>
+<h4 id="netctl-&#x8CC7;&#x8A0A;">netctl &#x8CC7;&#x8A0A;</h4>
+<p><strong>&#x67E5;&#x770B; <code>ip addr</code> &#x8CC7;&#x8A0A;&#xFF1A;</strong></p>
+<pre><code>2: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:0c:29:78:6d:ca brd ff:ff:ff:ff:ff:ff
+    inet 192.168.***.***/24 brd 192.168.1.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::68ab:3868:***.***/64 scope link
+       valid_lft forever preferred_lft forever
+6: ppp0: &lt;POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP&gt; mtu 1492 qdisc fq_codel state UNKNOWN group default qlen 3
+    link/ppp
+    inet 114.***.***.*** peer 168.95.98.254/32 scope global ppp0
+       valid_lft forever preferred_lft forever
+</code></pre><p><strong>&#x67E5;&#x770B; <code>ip route</code> &#x8CC7;&#x8A0A;&#xFF1A;</strong></p>
+<pre><code>[root@archlinux ~]# ip route
+default dev ppp0 scope link
+default via 192.168.1.1 dev eth0 src 192.168.***.*** metric 202
+168.95.98.254 dev ppp0 proto kernel scope link src 114.***.***.***
+192.168.1.0/24 dev eth0 proto kernel scope link src 192.168.***.*** metric 202
+</code></pre><p><strong>&#x67E5;&#x770B; <code>/etc/resolv.conf</code> &#x8CC7;&#x8A0A;&#xFF1A;</strong></p>
+<pre><code># Generated by resolvconf
+nameserver 168.95.192.1
+nameserver 168.95.1.1
+nameserver 192.168.1.1
+</code></pre><h4 id="pppd-&#x8CC7;&#x8A0A;">pppd &#x8CC7;&#x8A0A;</h4>
+<p><strong>&#x67E5;&#x770B; <code>ip addr</code> &#x8CC7;&#x8A0A;&#xFF1A;</strong></p>
+<pre><code>2: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:0c:29:78:6d:ca brd ff:ff:ff:ff:ff:ff
+    inet 192.168.***.***/24 brd 192.168.1.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::68ab:3868:***.***/64 scope link
+       valid_lft forever preferred_lft forever
+3: ppp0: &lt;POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP&gt; mtu 1492 qdisc fq_codel state UNKNOWN group default qlen 3
+    link/ppp
+    inet 114.***.***.*** peer 168.95.98.254/32 scope global ppp0
+       valid_lft forever preferred_lft forever
+</code></pre><p><strong>&#x67E5;&#x770B; <code>ip route</code> &#x8CC7;&#x8A0A;&#xFF1A;</strong></p>
+<pre><code>default dev ppp0 scope link
+168.95.98.254 dev ppp0 proto kernel scope link src 114.***.***.***
+192.168.1.0/24 dev eth0 proto kernel scope link src 192.168.***.*** metric 202
+</code></pre><p><strong>&#x67E5;&#x770B; <code>/etc/resolv.conf</code> &#x8CC7;&#x8A0A;&#xFF1A;</strong></p>
+<pre><code># Generated by resolvconf
+nameserver 168.95.192.1
+nameserver 168.95.1.1
+nameserver 192.168.1.1
+</code></pre><h2 id="&#x53C3;&#x8003;">&#x53C3;&#x8003;</h2>
+<ul>
+<li><a href="http://service.hinet.net/2004/adsl8ip_1.htm" target="_blank">HiNet&#x5BA2;&#x6236;&#x670D;&#x52D9; &gt;&#x7533;&#x8ACB;&#x67E5;&#x8A62;&#x7570;&#x52D5; &gt; &#x5B89;&#x88DD;&#x8A2D;&#x5B9A;&gt;&#x56FA;&#x5B9A;&#x5236;&#x5B89;&#x88DD;&#x8A2D;&#x5B9A;</a></li>
+<li><a href="http://11396852.blog.51cto.com/11386852/1894255" target="_blank">pppoe&#x62E8;&#x53F7;&#x4E0A;&#x7F51;&#x5B89;&#x88C5;Arch Linux - 11386852 - 51CTO&#x6280;&#x672F;&#x535A;&#x5BA2;</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/netctl" target="_blank">netctl - ArchWiki</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ppp.html" class="navigation navigation-prev " aria-label="Previous page: ppp 程式包">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="free_ssl.html" class="navigation navigation-next " aria-label="Next page: 免費的安全通訊協定證書">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"固定網路協定位址","level":"1.4.2","depth":2,"next":{"title":"免費的安全通訊協定證書","level":"1.4.3","depth":2,"path":"content/command_and_operation/free_ssl.md","ref":"content/command_and_operation/free_ssl.md","articles":[]},"previous":{"title":"ppp 程式包","level":"1.4.1","depth":2,"path":"content/command_and_operation/ppp.md","ref":"content/command_and_operation/ppp.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["ga","livereload"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-93985618-1"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/command_and_operation/static_ip.md","mtime":"2018-01-22T12:23:42.388Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-22T12:24:15.155Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
