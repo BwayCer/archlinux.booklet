@@ -7,7 +7,7 @@ fnAssistant() {
 
     printf "是否改變字體大小 to change the font size？ ( 12~32 ； \e[01;32mNo: 取消 ；\e[00m ) : "
     read fontSize
-    if [ -n "`echo "$fontSize" | grep "^[0-9]+$"`" ]; then
+    if [ -n "`echo "$fontSize" | grep "^[0-9]\+$"`" ]; then
         printf "\e[01;33m%s\e[00m\n" "pacman -Sy --noconfirm terminus-font"
         pacman -Sy
         pacman -S --noconfirm terminus-font
@@ -34,8 +34,8 @@ fnAssistant() {
     read bisUse
     case "$bisUse" in
         [Yy] | Yes | yes )
-            printf "\e[01;33m%s\e[00m\n" "passwd"
-            passwd
+            printf "\e[01;33m%s\e[00m\n" "passwd root"
+            passwd root
 
             printf "\e[01;33m%s\e[00m\n" "echo -e "PermitRootLogin yes" >> /etc/ssh/sshd_config"
             echo -e "PermitRootLogin yes" >> /etc/ssh/sshd_config
@@ -50,12 +50,14 @@ fnAssistant() {
             printf "\e[01;33m%s\e[00m\n" "ss -tnlp"
             ss -tnlp
 
-            echo -e "\n# \e[33mcheck if \"Local Address:Port\" have \":::22\" to allow ssh access.\e[0m"
+            printf "\n"
+            printf "\e[01;33m# %s\e[00m\n" 'check if "Local Address:Port" have ":::22" to allow ssh access.'
             ;;
     esac
 }
 
 fnMain() {
+    printf "\n\n"
     printf "\e[00;37m# %s\e[00m\n" "一． 劃分磁碟 Partition the disks"
     printf "\n"
 
@@ -81,8 +83,8 @@ fnMain() {
     printf "\n\n"
     printf "\e[00;37m# %s\e[00m\n" "二． 磁碟配置 Configure the disk"
 
-        printf "\e[01;31m# %s\e[00m\n" "注意： 此操作必需在磁區未掛載之情況下進行！"
-        printf "\e[01;31m# %s\e[00m\n" "       this operation need to be executed with the partition has unmounted"
+        printf "\e[01;33m# %s\e[00m\n" "注意： 此操作必需在磁區未掛載之情況下進行！"
+        printf "\e[01;33m# %s\e[00m\n" "       this operation need to be executed with the partition has unmounted"
 
         fnConfigureDisk() {
             local tmp inputTxt
@@ -93,12 +95,11 @@ fnMain() {
             read inputTxt
             case "$inputTxt" in
                 f | finish )
+                    printf "\n"
                     printf "# %-12s %-15s %s\n" $fnConfigureDisk_info
                     ;;
                 h | help )
-                    printf "\e[00;37m#"
-                    printf "# 依照順序填入 磁區、檔案系統、掛載位置，並以分號分隔。 (ex: /dev/sda1:ext4:/boot)"
-                    printf "\e[00m\n"
+                    fnConfigureDisk_help
                     fnConfigureDisk
                     ;;
                 S | skip)
@@ -120,9 +121,15 @@ fnMain() {
                     ;;
             esac
         }
+        fnConfigureDisk_help() {
+            printf "\e[00;37m#"
+            printf "# 依照順序填入 磁區、檔案系統、掛載位置，並以分號分隔。 (ex: /dev/sda1:ext4:/boot)"
+            printf "\e[00m\n"
+        }
         fnConfigureDisk_info="Device FileSystem MountPoint"
 
         printf "\n"
+        fnConfigureDisk_help
         fnConfigureDisk
 
         printf "\n"
@@ -145,8 +152,8 @@ fnMain() {
 
         fnPrompt \
             "# 選擇映射站 edit /etc/pacman.d/mirrorlist" \
-            "Yes|yes|Y|y:*:確定" \
-            "skip|S::略過步驟"
+            "Yes|yes|Y|y::確定" \
+            "skip|S:*:略過步驟"
 
         case "$rtnPrompt" in
             Yes )
@@ -181,13 +188,12 @@ fnMain() {
 
         fnPrompt \
             "# 初始化環境 pacstrap /mnt <pkg>" \
-            "Yes|yes|Y|y:*:確定" \
-            "skip|S::略過步驟"
+            "Yes|yes|Y|y::確定" \
+            "skip|S:*:略過步驟"
 
         case "$rtnPrompt" in
             Yes )
-                printf "\e[00;37m# %s\e[00m\n" "選擇要安裝的程式包 (default: base) : "
-
+                printf "# 選擇要安裝的程式包 (default: base) : "
                 read basePkg
                 if [ -z "$basePkg" ]; then basePkg=base; fi
 
@@ -202,9 +208,15 @@ fnMain() {
     printf "\n\n"
     printf "\e[00;37m# %s\e[00m\n" "四． 配置系統 Configure the system"
 
+        printf "\e[01;33m"
+        echo '# 由於 `arch-chroot` 使用問題導致對答模式無法使用！'
+        echo '# 目前採取替代方案是將所有問答做完後再合併執行命令。'
+        printf "\e[00m\n"
+
+
         fnPrompt "# 建立文件系統列表 genfstab -U /mnt >> /mnt/etc/fstab" \
-            "Yes|yes|Y|y:*:確定" \
-            "skip|S::略過步驟"
+            "Yes|yes|Y|y::確定" \
+            "skip|S:*:略過步驟"
 
         case "$rtnPrompt" in
             Yes )
@@ -224,13 +236,14 @@ fnMain() {
         local timeZonefile
 
         fnPrompt "# 調整時區 Time Zone" \
-            "Yes|yes|Y|y:*:確定" \
-            "skip|S::略過步驟"
+            "Yes|yes|Y|y::確定" \
+            "skip|S:*:略過步驟"
 
         case "$rtnPrompt" in
             Yes )
                 fnPrompt "# 是否選擇臺灣所在之時間 臺北時間" \
-                    "Yes|yes|Y|y::是" "No|no|N|n:*:不是"
+                    "Yes|yes|Y|y::是" \
+                    "No|no|N|n:*:不是"
 
                 case "$rtnPrompt" in
                     Yes )
@@ -238,12 +251,11 @@ fnMain() {
                         ;;
                     No )
                         fnChooseTimeZone
-                        timeZonefile="$rtnfnChooseTimeZone"
+                        timeZonefile="$rtnChooseTimeZone"
                         ;;
                 esac
 
-                printf "\e[01;33m%s\e[00m\n" "echo \"ln -sf $timeZonefile /etc/localtime\" | arch-chroot /mnt"
-                echo "ln -sf $timeZonefile /etc/localtime" | arch-chroot /mnt
+                fnConfigureSystemBatch chroot "ln -sf $timeZonefile /etc/localtime"
 
                 # timedatectl
                 # date
@@ -259,9 +271,10 @@ fnMain() {
 
         local localeChoose
 
-        fnPrompt "# 選擇語系 Locale"
-            "Yes|yes|Y|y:*:確定" \
-            "skip|S::略過步驟"
+        fnPrompt "# 選擇語系 Locale" \
+            "Yes|yes|Y|y::確定" \
+            "skip|S:*:略過步驟"
+
 
         case "$rtnPrompt" in
             Yes )
@@ -275,32 +288,23 @@ fnMain() {
                 read localeChoose
                 case "$localeChoose" in
                     [Yy] | Yes | yes )
-                        printf "\e[01;33m""echo '"
-                        printf 'sed -i "s/^#\(\(en_US\|zh_TW\).UTF-8 UTF-8\)/\1/" /etc/locale.gen'
-                        printf "' | arch-chroot /mnt"
-                        printf "\e[00m\n"
-                        echo 'sed -i "s/^#\(\(en_US\|zh_TW\).UTF-8 UTF-8\)/\1/" /etc/locale.gen'
-                            | arch-chroot /mnt
+                        fnConfigureSystemBatch chroot \
+                            'sed -i "s/^#\(\(en_US\|zh_TW\).UTF-8 UTF-8\)/\1/" /etc/locale.gen'
 
-                        printf "\e[01;33m%s\e[00m\n" 'echo "locale-gen" | arch-chroot /mnt'
-                        echo "locale-gen" | arch-chroot /mnt
+                        fnConfigureSystemBatch chroot 'locale-gen'
                         ;;
                 esac
 
+                printf "\n"
                 printf "# 是否設定選項 en_US、zh_TW 語言包？"
                 printf "( Yes: 確定 ； \e[01;32mNo: 取消 ；\e[00m ) : "
                 read localeChoose
                 case "$localeChoose" in
                     [Yy] | Yes | yes )
-                        printf "\e[01;33m""echo '"
-                        printf 'locale | sed "s/\([A-Z_]=\).*/\1\"zh_TW.UTF-8\"/" > /etc/locale.conf'
-                        printf "' | arch-chroot /mnt"
-                        printf "\e[00m\n"
-                        echo 'locale | sed "s/\([A-Z_]=\).*/\1\"zh_TW.UTF-8\"/" > /etc/locale.conf' \
-                            | arch-chroot /mnt
+                        fnConfigureSystemBatch chroot \
+                            'locale | sed "s/\([A-Z_]=\).*/\1\"zh_TW.UTF-8\"/" > /etc/locale.conf'
 
-                        printf "\e[01;33m%s\e[00m\n" "cat /mnt/etc/locale.conf"
-                        cat /mnt/etc/locale.conf
+                        fnConfigureSystemBatch record 'cat /mnt/etc/locale.conf'
                         ;;
                 esac
                 ;;
@@ -314,18 +318,16 @@ fnMain() {
         local hostname
 
         fnPrompt "# 主機管理 Host management" \
-            "Yes|yes|Y|y:*:確定" \
-            "skip|S::略過步驟"
+            "Yes|yes|Y|y::確定" \
+            "skip|S:*:略過步驟"
 
         case "$rtnPrompt" in
             Yes )
                 printf "# 請輸入主機名稱 hostname : "
                 read hostname
-                printf "\e[01;33m%s\e[00m\n" "echo \"$hostname\" > /mnt/etc/hostname"
-                echo "$hostname" > /mnt/etc/hostname
+                fnConfigureSystemBatch record "echo \"$hostname\" > /mnt/etc/hostname"
 
-                printf "\e[01;33m%s\e[00m\n" "cat /mnt/etc/hostname"
-                cat /mnt/etc/hostname
+                fnConfigureSystemBatch record 'cat /mnt/etc/hostname'
                 ;;
             skip )
                 ;;
@@ -337,53 +339,67 @@ fnMain() {
         local biosType rootPartition partuuid bootMenu
 
         fnPrompt "# 安裝開機程式 install boot program" \
-            "Yes|yes|Y|y:*:確定" \
-            "skip|S::略過步驟"
+            "Yes|yes|Y|y::確定" \
+            "skip|S:*:略過步驟"
 
         case "$rtnPrompt" in
             Yes )
-                fnPrompt "# 請選擇韌體" "BIOS|B|b::" "UEFI|U|u|E|e::"
-                biosType="$rtnPrompt"
+                ls /sys/firmware/efi > /dev/null 2>&1
+                if [ $? == 0 ]; then
+                    biosType=UEFI
+                else
+                    biosType=BIOS
+                fi
+                printf "\e[00;37m# %s\e[00m\n" "你的韌體被判定為 $biosType"
 
-                printf "# 請問根目錄磁區位置 (ex: /dev/sda1 or /dev/sda (若選擇 BIOS)) : "
+                printf "# 請問根目錄磁區位置"
+                case "$biosType" in
+                    BIOS )
+                        printf " (ex: /dev/sda) : "
+                        ;;
+                    UEFI )
+                        printf " (ex: /dev/sda1) : "
+                        ;;
+                esac
                 read rootPartition
 
-                printf "\e[01;33m%s\e[00m\n" 'echo "mkinitcpio -p linux" | arch-chroot /mnt'
-                echo "mkinitcpio -p linux" | arch-chroot /mnt
+                fnConfigureSystemBatch chroot 'mkinitcpio -p linux'
 
                 case "$biosType" in
                     BIOS )
-                        printf "\e[01;33m%s\e[00m\n" "echo \"pacman -S grub-bios\" | arch-chroot /mnt"
-                        echo "pacman -S grub-bios" | arch-chroot /mnt
+                        fnConfigureSystemBatch chroot 'pacman -S grub-bios'
 
-                        printf "\e[01;33m%s\e[00m\n" "echo \"grub-install --target=i386-pc --recheck $rootPartition\" | arch-chroot /mnt"
-                        echo "grub-install --target=i386-pc --recheck $rootPartition" | arch-chroot /mnt
+                        fnConfigureSystemBatch chroot \
+                            "grub-install --target=i386-pc --recheck $rootPartition"
 
-                        printf "\e[01;33m%s\e[00m\n" "echo \"grub-mkconfig -o /boot/grub/grub.cfg\" | arch-chroot /mnt"
-                        echo "grub-mkconfig -o /boot/grub/grub.cfg" | arch-chroot /mnt
+                        fnConfigureSystemBatch chroot 'grub-mkconfig -o /boot/grub/grub.cfg'
                         ;;
                     UEFI )
-                        printf "\e[01;33m%s\e[00m\n" "echo \"bootctl install\" | arch-chroot /mnt"
-                        echo "bootctl install" | arch-chroot /mnt
+                        fnConfigureSystemBatch chroot 'bootctl install'
 
-                        echo -e "default arch\ntimeout 3" > /mnt/boot/loader/loader.conf
-                        printf "\e[01;33m%s\e[00m\n" "cat /mnt/boot/loader/loader.conf"
-                        cat /mnt/boot/loader/loader.conf
+                        fnConfigureSystemBatch record \
+                            'echo -e "default arch\ntimeout 3" > /mnt/boot/loader/loader.conf'
+                        fnConfigureSystemBatch record 'cat /mnt/boot/loader/loader.conf'
 
                         partuuid=`blkid -s PARTUUID $rootPartition | sed "s/.*PARTUUID=\"\([a-f0-9-]\+\)\"/\1/"`
                         bootMenu=$bootMenu"title Archlinux\n"
                         bootMenu=$bootMenu"linux /vmlinuz-linux\n"
                         bootMenu=$bootMenu"initrd /initramfs-linux.img\n"
                         bootMenu=$bootMenu"options root=PARTUUID=$partuuid rw"
-                        echo -e "$bootMenu" > /mnt/boot/loader/entries/arch.conf
-                        printf "\e[01;33m%s\e[00m\n" "cat /mnt/boot/loader/entries/arch.conf"
-                        cat /mnt/boot/loader/entries/arch.conf
+                        fnConfigureSystemBatch record \
+                            "echo -e \"$bootMenu\" > /mnt/boot/loader/entries/arch.conf"
+                        fnConfigureSystemBatch record 'cat /mnt/boot/loader/entries/arch.conf'
                         ;;
                 esac
                 ;;
             skip )
                 ;;
         esac
+
+    if [ -n "$fnConfigureSystemBatch_command" ]; then
+        printf "\n\n\e[00;37m# %s\e[00m\n\n" "開始執行被記錄之配置系統命令"
+        fnConfigureSystemBatch execute
+    fi
 
 
     printf "\n\n"
@@ -437,16 +453,23 @@ fnHandleGrain() {
     if [ ! -d "$mountPath" ]; then
         mkdir "$mountPath"
     fi
+    echo "$grain" "$mountPath"
     $mkfsCmd "$grain"
-    [ $? != 0 ] && return $?
+    tmp=$?
+    if [ $tmp != 0 ]; then
+        return $tmp
+    fi
     mount "$grain" "$mountPath"
-    [ $? != 0 ] && return $?
+    tmp=$?
+    if [ $tmp != 0 ]; then
+        return $tmp
+    fi
 }
 
 fnHandleMirrorList() {
     local mirrorFile mirrorArea
     mirrorFile="$1"
-    mirrorArea="$1"
+    mirrorArea="$2"
 
     local mirrorList serverList deleteList
     local lineNumber newMirrorList
@@ -462,7 +485,7 @@ fnHandleMirrorList() {
         newMirrorList=`echo -e "$newMirrorList" | sed "$lineNumber,$(( $lineNumber + 1 ))d"`
     done
 
-    echo "`echo "$newMirrorList" | sed 's/\$\(\w\)/\\\\$\1/g'`" ">" $mirrorFile
+    echo "$newMirrorList" > $mirrorFile
 }
 
 rtnChooseMirrorArea=""
@@ -487,13 +510,51 @@ fnChooseMirrorArea() {
     }
 }
 
+nextLine="
+"
+fnConfigureSystemBatch() {
+    local args method
+    args=("$@")
+    method="$1"
+
+    local tmp txtCommand
+    local idx len val
+    txtCommand=$fnConfigureSystemBatch_command
+
+    case "$method" in
+        record )
+            tmp=${args[@]:1}
+            txtCommand=$txtCommand$nextLine$tmp
+            fnConfigureSystemBatch_command=$txtCommand
+            printf "\e[01;33m%s\e[00m\n" "# (待執行) $tmp"
+            ;;
+        chroot )
+            tmp=${args[@]:1}
+            fnConfigureSystemBatch record "echo '$tmp' | arch-chroot /mnt"
+            ;;
+        execute )
+            txtCommand=`echo "$txtCommand" | grep .`
+            len=`echo "$txtCommand" | wc -l`
+            for idx in `seq 1 $len`
+            do
+                val=`echo "$txtCommand" | sed -n "${idx}p"`
+                printf "\e[01;33m$val\e[00m\n"
+                sh -c "$val"
+            done
+            ;;
+    esac
+}
+fnConfigureSystemBatch_command=""
+
 rtnChooseTimeZone=""
 fnChooseTimeZone() {
     local inputTxt
 
     fnAsk() {
-        printf "\e[01;33m# %s\e[00m\n" \
+        printf "\e[01;33m# %s\e[00m" \
             "提醒 你將進入 less 模式查閱資料並從中找尋合適的時區文件， 輸入 p 及可離開。 (enter) "
+        read
+
         printf "%-38s   %-38s\n" \
             `find /mnt/usr/share/zoneinfo/ -type f | sed "s/^\/mnt\/usr\/share\/zoneinfo\///"` \
             | less
@@ -507,6 +568,8 @@ fnChooseTimeZone() {
             fnAsk
         fi
     }
+
+    fnAsk
 }
 
 
@@ -516,6 +579,7 @@ fnChooseTimeZone() {
 rtnPrompt=""
 fnPrompt() {
     local txtQuestion
+    args=("$@")
     txtQuestion=$1
 
     local val describe
@@ -526,7 +590,7 @@ fnPrompt() {
     defaultOption=""
     txtDescribe=""
 
-    for val in "${@:1}"
+    for val in "${args[@]:1}"
     do
         if [ -z "`echo "$val" | grep "[A-Za-z0-9_-][A-Za-z0-9_|-]*\(:\*\?\)\?\(:.\*\)\?"`" ]; then continue; fi
 
